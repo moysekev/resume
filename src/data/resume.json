@@ -1,0 +1,210 @@
+{
+    "firstName": "Kevin",
+    "lastName": "Moyse",
+    "title": "Architecte Logiciel FullStack",
+    "picture": "/kevin-moyse.jpeg",
+    "address": [
+        "1 Boulevard du Linkin",
+        "22700 Perros-Guirec"
+    ],
+    "summary": [
+        "Senior level developer architect with extensive experience building secure applications using a wide range of technologies.",
+        "Specializes in modern Web UI, API, and Database development.",
+        "Experience working in Telecom and in the Financial/FinTech industries.",
+        "With a strong background in Java, NodeJS, DevOps, and Agile methodologies, I can bring a strong skillset to any development team with the ability to hit the ground running."
+    ],
+    "email": "kevin_moyse@yahoo.fr",
+    "phone": "0689666498",
+    "skills": [
+        "Java/TypeScript",
+        "FullStack",
+        "Web API",
+        "NodeJS",
+        "Express",
+        "REST",
+        "React",
+        "Angular",
+        "jQuery",
+        "Bootstrap",
+        "Oracle",
+        "MySQL",
+        "MongoDB",
+        "Meteor",
+        "AWS",
+        "GCP",
+        "CI/CD",
+        "GitHub Actions",
+        "Jenkins",
+        "SonarQube",
+        "prometheus",
+        "Git",
+        "GitHub/lab",
+        "Jira, Confluence"
+    ],
+    "website": "",
+    "linkedIn": "https://www.linkedin.com/in/kevin-moyse-3352bb29/",
+    "github": "https://github.com/moysekev",
+    "positions": [
+        {
+            "title": "Solutions Architect",
+            "name": "Apizee - Lannion",
+            "logo": "/logos/apizee.png",
+            "website": "https://www.apizee.com/",
+            "startDate": "3/15/2021",
+            "summary": "Architecture et développement produit. Direction d’équipe.",
+            "details": [
+                "ApiRTC est une plateforme de visio conférence et une librairie de développement avec laquelle nous proposons des produits finaux : télémédecine, diagnostique, assistance, intégrés dans les CRMs tels que Salesforce ou Zendesk",
+                "Worked on the front-end user interfaces made in React, Material UI, and NodeJS",
+                "Provided mentorship to junior developers",
+                "Salesforce, Genesys, Talkdesk integration"
+            ],
+            "domains": [
+                "Visio-Conférence"
+            ],
+            "skills": [
+                "Java/TypeScript",
+                "React, Angular",
+                "Material-UI",
+                "Meteor",
+                "NodeJS",
+                "FullStack",
+                "Oauth2",
+                "WebRTC",
+                "GitHub/Lab CI/CD"
+            ]
+        },
+        {
+            "title": "Architecte Produits",
+            "name": "Fractales - Paris",
+            "startDate": "3/15/2016",
+            "endDate": "3/1/2021",
+            "summary": "Architecture et direction des développements.",
+            "details": [
+                "Responsable de la Factory logicielle complète éditeur, et satisfaction client",
+                "Conception, développement, et direction d’équipe d’une solution logicielle BigData et calculs massivement distribués.",
+                "Automatisation de processus métier longs et très lourds en terme de calculs : Conception complète, direction d’équipe, et développement des couches socle frontend et backend.",
+                "Conception et réalisation complète d’une solution réglementaire en mode SaaS de partage de logiciels et d’information, distribution des calculs. (interface web, base nosql...)"
+            ],
+            "domains": [
+                "Actuariat"
+            ],
+            "skills": [
+                "Java Spring",
+                "Python",
+                "Spark",
+                "REST APIs",
+                "Angular",
+                "MongoDB",
+                "Docker",
+                "Git",
+                "Jenkins",
+                "SonarQube"
+            ]
+        },
+        {
+            "title": "Architecte Senior",
+            "name": "Tibco Software - Paris",
+            "startDate": "2010",
+            "endDate": "3/15/2016",
+            "summary": "Définition d'architecture globale d'applications au sein de SI dans les domaines Télécom et bancaires.",
+            "details": [
+                "Ecriture de spécifications détaillées, développement, missions d'expertises. Création de processeurs de paiement (gestion transactionelle des balances), de connecteurs d'applications.",
+                "Monétique : RBS (Royal Bank of Scotland), XL indonesia",
+                "Télécom : 3UK, Orange, SFR, Bouygues, SwissCom, BSkyB"
+            ],
+            "domains": [
+                "Télécom",
+                "Monétique"
+            ],
+            "skills": [
+                "JavaEE",
+                "In-Memory",
+                "Transactions",
+                "HighAvailability",
+                "AngularJS",
+                "Sécurité"
+            ]
+        },
+        {
+            "title": "Développeur",
+            "name": "Kabira Technologies - Paris",
+            "startDate": "3/1/2003",
+            "endDate": "2010",
+            "summary": "Développement de projets, produits et solutions.",
+            "details": [
+                "Compréhension des besoins clients, afin de créer et/ou d'améliorer des produits.",
+                "Architecture",
+                "Invention et réalisation du Produit KBM (Business Modeling) afin de développer une solution de 'mobilepayment' en Model Driven Development (génération automatique du code à partir de diagrammes UML) basée sur la plateforme multithread KTP",
+                "Architecture, conseil, direction d'équipe, développement OSDP (provisioning) Orange",
+                "Architecture sur projets Provisioning (KPSA) et Médiation pour SFR, Bouygues",
+                "Mobile payment, 'balance management', médiation (Globacom, T-Mobile, Orange,…)",
+                "Conception et réalisation de plusieurs produits"
+            ],
+            "domains": [
+                "Télécom",
+                "Provisioning"
+            ],
+            "skills": [
+                "Java",
+                "Unix Shell Scripts",
+                "SVN"
+            ]
+        },
+        {
+            "title": "Ingénieur Logiciel",
+            "name": "Orange - Lannion",
+            "startDate": "9/1/2000",
+            "endDate": "3/1/2003",
+            "summary": "Développeur d'une solution de Rapid-Application-Development : de la modélisation à la compilation.",
+            "details": [
+                "Projet AdONIS (Advanced OSS for New IP Services, VoIp, Vpn...), suite du sujet du tutorat.",
+                "Conception(UML) et réalisation d’une plateforme de gestion réseaux IP. Développement Bdd&IHM"
+            ],
+            "domains": [
+                "Télécom",
+                "VoIp/Vpn"
+            ],
+            "skills": [
+                "UML",
+                "VisualBasic",
+                "C/C++",
+                "Flex/Bison"
+            ]
+        }
+    ],
+    "educations": [
+        {
+            "name": "Diplôme d'Ingénieur Informatique",
+            "location": "ENSSAT - Clermont-Ferrand",
+            "dateText": "2001"
+        },
+        {
+            "name": "DUT Informatique option Systèmes Industriels",
+            "location": "IUT - Clermont-Ferrand",
+            "dateText": "1998"
+        },
+        {
+            "name": "Baccalauréat S (option TI)",
+            "location": "LEGT La Fayette - Clermont-Ferrand",
+            "dateText": "1996"
+        }
+    ],
+    "leisures": [
+        {
+            "name": "kitesurf",
+            "icon": "/kite-surf.svg"
+        },
+        {
+            "name": "guitar",
+            "icon": "/guitar.svg"
+        },
+        {
+            "name": "tennis",
+            "icon": "/tennis.svg"
+        },
+        {
+            "name": "snowboard",
+            "icon": "/snowboard.svg"
+        }
+    ]
+}
