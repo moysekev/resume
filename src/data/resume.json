@@ -46,12 +46,12 @@
     "github": "https://github.com/moysekev",
     "positions": [
         {
-            "title": "Solutions Architect",
+            "title": "Architecte Solutions",
             "name": "Apizee - Lannion",
-            "logo": "/logos/apizee.png",
+            "logo": "/apizee.svg",
             "website": "https://www.apizee.com/",
             "startDate": "3/15/2021",
-            "summary": "Architecture et développement produit. Direction d’équipe.",
+            "summary": "Direction d’équipe, refonte d'architecture, développement produit.",
             "details": [
                 "ApiRTC est une plateforme de visio conférence et une librairie de développement avec laquelle nous proposons des produits finaux : télémédecine, diagnostique, assistance, intégrés dans les CRMs tels que Salesforce ou Zendesk",
                 "Worked on the front-end user interfaces made in React, Material UI, and NodeJS",
@@ -62,23 +62,24 @@
                 "Visio-Conférence"
             ],
             "skills": [
+                "FullStack",
                 "Java/TypeScript",
                 "React, Angular",
                 "Material-UI",
                 "Meteor",
                 "NodeJS",
-                "FullStack",
-                "Oauth2",
                 "WebRTC",
+                "Oauth2",
                 "GitHub/Lab CI/CD"
             ]
         },
         {
-            "title": "Architecte Produits",
+            "title": "Directeur informatique",
             "name": "Fractales - Paris",
+            "logo": "fractales.webp",
             "startDate": "3/15/2016",
             "endDate": "3/1/2021",
-            "summary": "Architecture et direction des développements.",
+            "summary": "Conception d'une solution SaaS de partage et d’une solution BigData et calculs distribués.",
             "details": [
                 "Responsable de la Factory logicielle complète éditeur, et satisfaction client",
                 "Conception, développement, et direction d’équipe d’une solution logicielle BigData et calculs massivement distribués.",
@@ -104,6 +105,7 @@
         {
             "title": "Architecte Senior",
             "name": "Tibco Software - Paris",
+            "logo": "/tibco.png",
             "startDate": "2010",
             "endDate": "3/15/2016",
             "summary": "Définition d'architecture globale d'applications au sein de SI dans les domaines Télécom et bancaires.",
@@ -120,14 +122,15 @@
                 "JavaEE",
                 "In-Memory",
                 "Transactions",
-                "HighAvailability",
-                "AngularJS",
+                "Haute Disponibilité",
+                "Performances",
                 "Sécurité"
             ]
         },
         {
             "title": "Développeur",
-            "name": "Kabira Technologies - Paris",
+            "name": "Kabira Technologies - San Mateo, CA",
+            "logo": "/kabira.png",
             "startDate": "3/1/2003",
             "endDate": "2010",
             "summary": "Développement de projets, produits et solutions.",
@@ -146,6 +149,8 @@
             ],
             "skills": [
                 "Java",
+                "KPSA",
+                "KTP",
                 "Unix Shell Scripts",
                 "SVN"
             ]
@@ -153,6 +158,7 @@
         {
             "title": "Ingénieur Logiciel",
             "name": "Orange - Lannion",
+            "logo": "/orange.png",
             "startDate": "9/1/2000",
             "endDate": "3/1/2003",
             "summary": "Développeur d'une solution de Rapid-Application-Development : de la modélisation à la compilation.",
@@ -168,7 +174,9 @@
                 "UML",
                 "VisualBasic",
                 "C/C++",
-                "Flex/Bison"
+                "SQL",
+                "Flex/Bison",
+                "Oracle"
             ]
         }
     ],

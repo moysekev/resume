@@ -1,0 +1,6 @@
+/* remove margins when printing */
+@media print {
+    body {
+        margin: 0 !important;
+    }
+}
