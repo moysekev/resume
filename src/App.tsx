@@ -60,6 +60,8 @@ const formatDateText = (startDate: string, endDate?: string) => {
 
 export default function App() {
 
+  const printable = false;
+
   const linkedInId = () => {
     var lastPart = '';
     var url = linkedIn;
@@ -72,155 +74,149 @@ export default function App() {
     return lastPart
   }
 
+  const header = (<Stack sx={{ backgroundColor: '#a0b4c0', p: 2 }}>
+    <Stack direction='row' spacing={1}
+      alignItems='center' justifyContent='space-between'>
+      <Stack direction='row'>
+        <Typography variant="h3" fontWeight={700} fontSize={32}>
+          {firstName} {lastName}</Typography>
+      </Stack>
+      <Avatar alt={`${firstName} ${lastName}`} src={picture} sx={{ width: 96, height: 96 }} />
+      <Stack spacing={.7}>
+        {linkedIn && linkedIn !== '' &&
+          <Link underline="hover" href={linkedIn}>
+            <Stack direction='row' alignItems='center'>
+              <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
+                <img src={'/linkedin.png'} width='24px' alt='' />
+              </ListItemIcon>
+              <Typography variant="subtitle2" fontWeight={700}>
+                {linkedInId()}
+              </Typography>
+            </Stack>
+          </Link>}
+        <Link underline="hover" href={`mailto:${email}`}>
+          <Stack direction='row' alignItems='center'>
+            <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
+              <EmailIcon fontSize="small" />
+            </ListItemIcon>
+            <Typography variant="subtitle2" fontWeight={700}>
+              {email}
+            </Typography>
+          </Stack>
+        </Link>
+        <Link underline="hover" href={`tel:${phone}`}>
+          <Stack direction='row' alignItems='center'>
+            <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
+              <PhoneIcon fontSize="small" />
+            </ListItemIcon>
+            <Typography variant="subtitle2" fontWeight={700}>
+              {phone}
+            </Typography>
+          </Stack>
+        </Link>
+        <Stack direction='row' alignItems='center'>
+          <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
+            <LocationOnIcon fontSize="small" />
+          </ListItemIcon>
+          <Stack>
+            {address.map((line, index) => <Typography key={index} variant="subtitle2" component="div">
+              {line}
+            </Typography>)}
+          </Stack>
+        </Stack>
+      </Stack>
+    </Stack>
+    <Divider>
+      <Typography variant="overline" fontWeight={700}>{title}</Typography>
+    </Divider>
+    <Typography variant="body1" align='justify'>
+      {summary}
+    </Typography>
+  </Stack>);
+
+  const _positions = positions.map((position, index) =>
+    <Stack key={index}>
+      <Stack direction='row' alignItems='center' justifyContent='space-between'>
+        <Typography variant="h6">
+          {position.title}
+        </Typography>
+        <Stack direction='row' spacing={2}>
+          <Typography variant="caption" color="primary" component="div">
+            {formatDateText(position.startDate, position.endDate)}
+          </Typography>
+          <Stack direction='row' spacing={1}>
+            {position.domains?.map((domain, index) => <Typography key={index} variant="caption" color="secondary" component="span">
+              {domain}
+            </Typography>)}
+          </Stack>
+        </Stack>
+        <Stack direction='row' spacing={1} alignItems='center'>
+          {position.logo && <img src={position.logo} width='24px' alt='' />}
+          <Typography variant="subtitle2">
+            {position.name}
+          </Typography>
+        </Stack>
+      </Stack>
+      <Typography variant="body1" align='justify'>{position.summary}</Typography>
+      {index === 0 && <Stack>
+        {position.details.map((detail, index) => <Typography variant="body2" align='justify'>
+          {detail}
+        </Typography>)}
+      </Stack>}
+      <Stack sx={{ mt: .7 }} direction='row' spacing={0.1}>
+        {/* variant="outlined" */}
+        {/* sx={{ bgcolor: '#a5bead' }} */}
+        {position.skills?.map((skill, index) => <Chip key={index} label={skill} />)}
+      </Stack>
+    </Stack>);
+
+  const _educations = educations.map((education, index) =>
+    <Stack key={index} direction='row' spacing={2} alignItems='center'>
+      <Typography variant="caption" color="primary" component="span">
+        {education.dateText}
+      </Typography>
+      <Box sx={{ width: '100%' }}>
+        <Stack direction='row' justifyContent='space-between'>
+          <Typography variant="subtitle1">
+            {education.name}
+          </Typography>
+          <Typography variant="subtitle2">
+            {education.location}
+          </Typography>
+        </Stack>
+      </Box>
+    </Stack>)
+
+  const _content = <>
+    {header}
+    <Stack sx={{ mt: 2 }} spacing={4}>
+      {_positions}
+      <Stack>
+        {_educations}
+      </Stack>
+    </Stack>
+    <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center' }} >
+      <Stack direction='row' spacing={2} alignItems='center'>
+        {leisures.map((leisures, index) =>
+          <img src={leisures.icon} width='28px' alt='foo' />
+        )}
+      </Stack>
+    </Box>
+  </>;
+
   return (
     // <Container maxWidth="lg" sx={{}}>
     // Use a Box instead to center Paper inside it
     <Box display="flex"
       justifyContent='center'
       alignItems='center'>
-      <Paper sx={{ width: "21cm", height: "29.7cm", p: 4 }}>
-        <Stack spacing={3}>
-          <Stack sx={{ backgroundColor: '#a0b4c0', p: 2 }}>
-            <Stack direction='row' spacing={1}
-              alignItems='center' justifyContent='space-between'>
-              <Stack direction='row'>
-                <Typography variant="h3" fontWeight={700} fontSize={32}>
-                  {firstName} {lastName}</Typography>
-              </Stack>
-              <Avatar alt={`${firstName} ${lastName}`} src={picture} sx={{ width: 96, height: 96 }} />
-              <Stack spacing={.7}>
-                {linkedIn && linkedIn !== '' &&
-                  <Link underline="hover" href={linkedIn}>
-                    <Stack direction='row' alignItems='center'>
-                      <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
-                        <img src={'/linkedin.png'} width='24px' alt='' />
-                      </ListItemIcon>
-                      <Typography variant="subtitle2" fontWeight={700}>
-                        {linkedInId()}
-                      </Typography>
-                    </Stack>
-                  </Link>}
-                <Link underline="hover" href={`mailto:${email}`}>
-                  <Stack direction='row' alignItems='center'>
-                    <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
-                      <EmailIcon fontSize="small" />
-                    </ListItemIcon>
-                    <Typography variant="subtitle2" fontWeight={700}>
-                      {email}
-                    </Typography>
-                  </Stack>
-                </Link>
-                <Link underline="hover" href={`tel:${phone}`}>
-                  <Stack direction='row' alignItems='center'>
-                    <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
-                      <PhoneIcon fontSize="small" />
-                    </ListItemIcon>
-                    <Typography variant="subtitle2" fontWeight={700}>
-                      {phone}
-                    </Typography>
-                  </Stack>
-                </Link>
-                <Stack direction='row' alignItems='center'>
-                  <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
-                    <LocationOnIcon fontSize="small" />
-                  </ListItemIcon>
-                  <Stack>
-                    {address.map((line, index) => <Typography key={index} variant="subtitle2" component="div">
-                      {line}
-                    </Typography>)}
-                  </Stack>
-                </Stack>
-              </Stack>
-            </Stack>
-            <Divider>
-              <Typography variant="overline" fontWeight={700}>{title}</Typography>
-            </Divider>
-            <Typography variant="body1" align='justify'>
-              {summary}
-            </Typography>
-          </Stack>
-          <Stack spacing={4}>
-            {positions.map((position, index) => <Box key={index}>
-              <Stack direction='row' alignItems='center' justifyContent='space-between'>
-                <Typography variant="h6">
-                  {position.title}
-                </Typography>
-                <Stack direction='row' spacing={2}>
-                  <Typography variant="caption" color="primary" component="div">
-                    {formatDateText(position.startDate, position.endDate)}
-                  </Typography>
-                  <Stack direction='row' spacing={1}>
-                    {position.domains?.map((domain, index) => <Typography key={index} variant="caption" color="secondary" component="span">
-                      {domain}
-                    </Typography>)}
-                  </Stack>
-                </Stack>
-                <Stack direction='row' spacing={1} alignItems='center'>
-                  {position.logo && <img src={position.logo} width='24px' alt='' />}
-                  <Typography variant="subtitle2">
-                    {position.name}
-                  </Typography>
-                </Stack>
-              </Stack>
-              <Typography variant="body1" align='justify'>{position.summary}</Typography>
-              {index === 0 && <Stack>
-                {position.details.map((detail, index) => <Typography variant="body2" align='justify'>
-                  {detail}
-                </Typography>)}
-              </Stack>}
-              {/* {index === 0 && <List dense={true}>
-                {position.details.map((detail, index) =>
-                  <ListItem key={index}>
-                    <ListItemIcon>
-                      <CheckIcon />
-                    </ListItemIcon>
-                    <ListItemText primary={detail} />
-                  </ListItem>,
-                )}
-              </List>} */}
-              <Stack sx={{ mt: .7 }} direction='row' spacing={0.1}>
-                {/* variant="outlined" */}
-                {/* sx={{ bgcolor: '#a5bead' }} */}
-                {position.skills?.map((skill, index) => <Chip key={index} label={skill} />)}
-              </Stack>
-            </Box>)}
-          </Stack>
-          <Divider />
-          <Stack>
-            {/* <Typography variant="h5" component="h5">
-          Formation
-        </Typography> */}
-            {educations.map((education, index) => <Box key={index}>
-              <Stack direction='row' spacing={2} alignItems='center'>
-                <Typography variant="caption" color="primary" component="span">
-                  {education.dateText}
-                </Typography>
-                <Box sx={{ width: '100%' }}>
-                  <Stack direction='row' justifyContent='space-between'>
-                    <Typography variant="subtitle1">
-                      {education.name}
-                    </Typography>
-                    <Typography variant="subtitle2">
-                      {education.location}
-                    </Typography>
-                  </Stack>
-                </Box>
-              </Stack>
-            </Box>)}
-          </Stack>
-          {/* <Divider /> */}
-          <Box sx={{ p: 1, display: 'flex', justifyContent: 'center' }} >
-            {/* <Typography variant="h5" component="h5">
-            Loisirs
-          </Typography> */}
-            <Stack sx={{ mt: 1 }} direction='row' spacing={2} alignItems='center'>
-              {leisures.map((leisures, index) =>
-                <img src={leisures.icon} width='32px' alt='foo' />
-              )}
-            </Stack>
-          </Box>
-        </Stack>
-      </Paper>
-    </Box>
+      {printable ? <Box sx={{ width: "21cm", p: 4 }}>
+        {_content}
+      </Box> :
+        //  height: "29.7cm"
+        <Paper sx={{ width: "21cm", p: 4 }}>
+          {_content}
+        </Paper>}
+    </Box >
   );
 }

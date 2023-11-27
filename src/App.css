@@ -3,4 +3,10 @@
     body {
         margin: 0 !important;
     }
+
+    /* html, body {
+        
+        width: 210mm;
+        height: 297mm;
+      }*/
 }
