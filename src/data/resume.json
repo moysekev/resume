@@ -8,6 +8,13 @@
         "22700 Perros-Guirec"
     ],
     "summary": [
+        "L'expérience acquise autour de divers domaines et technologies me permet d'orienter les choix d'architecture, d'outils et de développements permettant de bâtir une solution complète robuste, performante et sécurisé."
+    ],
+    "summary2": [
+        "Architecte développeur sénior ayant une expérience significative pour bâtir des applications sécurisées impliquant diverses technologies. ",
+        "J'ai de solides bases en Java, NodeJS, DevOps. Je sais apporter mes compétences à une équipe de developpement."
+    ],
+    "summary_en": [
         "Senior level developer architect with extensive experience building secure applications using a wide range of technologies.",
         "Specializes in modern Web UI, API, and Database development.",
         "Experience working in Telecom and in the Financial/FinTech industries.",
@@ -36,13 +43,14 @@
         "GitHub Actions",
         "Jenkins",
         "SonarQube",
-        "prometheus",
+        "Prometheus",
         "Git",
         "GitHub/lab",
         "Jira, Confluence"
     ],
     "website": "",
-    "linkedIn": "https://www.linkedin.com/in/kevin-moyse-3352bb29/",
+    "linkedIn": "",
+    "linkedIn_disabled": "https://www.linkedin.com/in/kevin-moyse-3352bb29/",
     "github": "https://github.com/moysekev",
     "positions": [
         {
@@ -51,25 +59,30 @@
             "logo": "/apizee.svg",
             "website": "https://www.apizee.com/",
             "startDate": "3/15/2021",
-            "summary": "Direction d’équipe, refonte d'architecture, développement produit.",
+            "summary": "Direction d’équipe, Architecture, Développement produit.",
             "details": [
+                "Refonte de l'architecture de l'ensemble des développements.",
+                " Conception des stratégies d'intégration dans des produits tiers tels que Salesforce, Zendesk, Genesys, Talkdesk..."
+            ],
+            "details_old": [
                 "ApiRTC est une plateforme de visio conférence et une librairie de développement avec laquelle nous proposons des produits finaux : télémédecine, diagnostique, assistance, intégrés dans les CRMs tels que Salesforce ou Zendesk",
                 "Worked on the front-end user interfaces made in React, Material UI, and NodeJS",
                 "Provided mentorship to junior developers",
-                "Salesforce, Genesys, Talkdesk integration"
+                "Salesforce, Zendesk, Genesys, Talkdesk integration"
             ],
             "domains": [
                 "Visio-Conférence"
             ],
             "skills": [
                 "FullStack",
-                "Java/TypeScript",
-                "React, Angular",
+                "TypeScript",
+                "React",
                 "Material-UI",
                 "Meteor",
                 "NodeJS",
                 "WebRTC",
                 "Oauth2",
+                "GCP",
                 "GitHub/Lab CI/CD"
             ]
         },
@@ -79,7 +92,7 @@
             "logo": "fractales.webp",
             "startDate": "3/15/2016",
             "endDate": "3/1/2021",
-            "summary": "Conception d'une solution SaaS de partage et d’une solution BigData et calculs distribués.",
+            "summary": "Conception d'une solution SaaS de partage de données et d’une solution BigData et calculs distribués.",
             "details": [
                 "Responsable de la Factory logicielle complète éditeur, et satisfaction client",
                 "Conception, développement, et direction d’équipe d’une solution logicielle BigData et calculs massivement distribués.",
@@ -91,11 +104,12 @@
             ],
             "skills": [
                 "Java Spring",
+                "Angular",
                 "Python",
                 "Spark",
-                "REST APIs",
-                "Angular",
                 "MongoDB",
+                "REST",
+                "AWS",
                 "Docker",
                 "Git",
                 "Jenkins",
@@ -120,11 +134,12 @@
             ],
             "skills": [
                 "JavaEE",
+                "Concurrent Programming",
                 "In-Memory",
                 "Transactions",
-                "Haute Disponibilité",
+                "High Availability",
                 "Performances",
-                "Sécurité"
+                "Security"
             ]
         },
         {
@@ -149,6 +164,8 @@
             ],
             "skills": [
                 "Java",
+                "Bootstrap",
+                "Parallelism",
                 "KPSA",
                 "KTP",
                 "Unix Shell Scripts",
@@ -156,12 +173,12 @@
             ]
         },
         {
-            "title": "Ingénieur Logiciel",
+            "title": "Ingénieur Logiciel R&D",
             "name": "Orange - Lannion",
             "logo": "/orange.png",
             "startDate": "9/1/2000",
             "endDate": "3/1/2003",
-            "summary": "Développeur d'une solution de Rapid-Application-Development : de la modélisation à la compilation.",
+            "summary": "Concepteur et Développeur d'une solution de Rapid-Application-Development : de la modélisation à la compilation.",
             "details": [
                 "Projet AdONIS (Advanced OSS for New IP Services, VoIp, Vpn...), suite du sujet du tutorat.",
                 "Conception(UML) et réalisation d’une plateforme de gestion réseaux IP. Développement Bdd&IHM"
