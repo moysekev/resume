@@ -17,20 +17,22 @@ const theme = createTheme({
     secondary: {
       main: '#344c42',
     },
+    info:{
+      main: '#b5cfbd',
+    },
     error: {
       main: red.A400,
     },
   },
   components: {
-    MuiChip: {
-      styleOverrides: {
-        root: {
-          // Some CSS
-          backgroundColor: '#b5cfbd'
-        },
-
-      }
-    },
+    // MuiChip: {
+    //   styleOverrides: {
+    //     root: {
+    //       // Some CSS
+    //       backgroundColor: '#b5cfbd'
+    //     },
+    //   }
+    // },
   },
 });
 

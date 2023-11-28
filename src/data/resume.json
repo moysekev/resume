@@ -9,7 +9,7 @@
         "22700 Perros-Guirec"
     ],
     "summary": [
-        "L'expérience acquise autour de divers domaines et technologies me permet d'orienter les choix d'architecture, d'outils et de développements permettant de bâtir une solution complète robuste, performante et sécurisé."
+        "Mon expérience acquise autour de divers domaines et technologies me permet d'orienter les choix d'architecture, d'outils, et de développement, permettant de bâtir des solutions complètes robustes, performantes et sécurisées."
     ],
     "summary2": [
         "Architecte développeur sénior ayant une expérience significative pour bâtir des applications sécurisées impliquant diverses technologies. ",
@@ -123,15 +123,16 @@
             "logo": "/tibco.png",
             "startDate": "2010",
             "endDate": "3/15/2016",
-            "summary": "Définition d'architecture globale d'applications au sein de SI dans les domaines Télécom et bancaires.",
+            "summary": "Ecriture de spécifications détaillées, développement d'applications de hautes performances.",
             "details": [
+                "Définition d'architecture globale d'applications au sein de SI dans les domaines Télécom et bancaires.",
                 "Ecriture de spécifications détaillées, développement, missions d'expertises. Création de processeurs de paiement (gestion transactionelle des balances), de connecteurs d'applications.",
                 "Monétique : RBS (Royal Bank of Scotland), XL indonesia",
                 "Télécom : 3UK, Orange, SFR, Bouygues, SwissCom, BSkyB"
             ],
             "domains": [
                 "Télécom",
-                "Monétique"
+                "Bancaire"
             ],
             "skills": [
                 "JavaEE",
@@ -231,6 +232,10 @@
         {
             "name": "snowboard",
             "icon": "/snowboard.svg"
+        },
+        {
+            "name": "vtt",
+            "icon": "/mountain-bike.png"
         }
     ]
 }

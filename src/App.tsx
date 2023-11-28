@@ -140,18 +140,23 @@ export default function App() {
   const _positions = positions.map((position, index) =>
     <Stack key={index}>
       <Stack direction='row' alignItems='center' justifyContent='space-between'>
-        <Typography variant="h6">
-          {position.title}
-        </Typography>
-        <Stack direction='row' spacing={2}>
-          <Typography variant="caption" color="primary" component="div">
-            {formatDateText(position.startDate, position.endDate)}
+        <Stack direction='row' alignItems='center' spacing={2}>
+          <Typography variant="h6">
+            {position.title}
           </Typography>
-          <Stack direction='row' spacing={1}>
+          {/* <Chip variant="outlined" color="primary" label={formatDateText(position.startDate, position.endDate)} /> */}
+        </Stack>
+        <Stack direction='row' alignItems='center' spacing={1}>
+          {/* <Typography variant="caption" color="primary" component="span">
+            {formatDateText(position.startDate, position.endDate)}
+          </Typography> */}
+          <Chip variant="outlined" color="primary" label={formatDateText(position.startDate, position.endDate)} />
+          {/* <Stack direction='row' spacing={1}>
             {position.domains?.map((domain, index) => <Typography key={index} variant="caption" color="secondary" component="span">
               {domain}
             </Typography>)}
-          </Stack>
+          </Stack> */}
+          <Typography variant="caption" color="secondary" component="span">{position.domains?.join(', ')}</Typography>
         </Stack>
         <Stack direction='row' spacing={1} alignItems='center'>
           {position.logo && <img src={position.logo} width='24px' alt='' />}
@@ -169,7 +174,7 @@ export default function App() {
       <Stack sx={{ mt: .7 }} direction='row' spacing={0.1}>
         {/* variant="outlined" */}
         {/* sx={{ bgcolor: '#a5bead' }} */}
-        {position.skills?.map((skill, index) => <Chip key={index} label={skill} />)}
+        {position.skills?.map((skill, index) => <Chip key={index} color="info" label={skill} />)}
       </Stack>
     </Stack>);
 
@@ -201,7 +206,7 @@ export default function App() {
     <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center' }} >
       <Stack direction='row' spacing={2} alignItems='center'>
         {leisures.map((leisures, index) =>
-          <img src={leisures.icon} width='28px' alt='foo' />
+          <img key={index} src={leisures.icon} width='28px' alt={leisures.name} />
         )}
       </Stack>
     </Box>
