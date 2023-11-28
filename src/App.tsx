@@ -140,22 +140,18 @@ export default function App() {
   const _positions = positions.map((position, index) =>
     <Stack key={index}>
       <Stack direction='row' alignItems='center' justifyContent='space-between'>
-        <Stack direction='row' alignItems='center' spacing={2}>
-          <Typography variant="h6">
-            {position.title}
-          </Typography>
-          {/* <Chip variant="outlined" color="primary" label={formatDateText(position.startDate, position.endDate)} /> */}
-        </Stack>
+        <Typography variant="h6">
+          {position.title}
+        </Typography>
         <Stack direction='row' alignItems='center' spacing={1}>
           {/* <Typography variant="caption" color="primary" component="span">
             {formatDateText(position.startDate, position.endDate)}
           </Typography> */}
-          <Chip variant="outlined" color="primary" label={formatDateText(position.startDate, position.endDate)} />
-          {/* <Stack direction='row' spacing={1}>
-            {position.domains?.map((domain, index) => <Typography key={index} variant="caption" color="secondary" component="span">
-              {domain}
-            </Typography>)}
-          </Stack> */}
+          {index === 0 ?
+            <Chip variant="outlined" color="primary" label={'depuis ' + format(Date.parse(position.startDate), "MMMM yyyy", { locale: fr })} />
+            :
+            <Chip variant="outlined" color="primary" label={formatDateText(position.startDate, position.endDate)} />}
+
           <Typography variant="caption" color="secondary" component="span">{position.domains?.join(', ')}</Typography>
         </Stack>
         <Stack direction='row' spacing={1} alignItems='center'>
@@ -197,14 +193,14 @@ export default function App() {
 
   const _content = <>
     {header}
-    <Stack sx={{ mt: 2 }} spacing={4}>
+    <Stack sx={{ mt: 2 }} spacing={3.3}>
       {_positions}
       <Stack>
         {_educations}
       </Stack>
     </Stack>
     <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center' }} >
-      <Stack direction='row' spacing={2} alignItems='center'>
+      <Stack direction='row' spacing={2.7} alignItems='center'>
         {leisures.map((leisures, index) =>
           <img key={index} src={leisures.icon} width='28px' alt={leisures.name} />
         )}

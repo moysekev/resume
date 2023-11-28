@@ -9,7 +9,7 @@
         "22700 Perros-Guirec"
     ],
     "summary": [
-        "Mon expérience acquise autour de divers domaines et technologies me permet d'orienter les choix d'architecture, d'outils, et de développement, permettant de bâtir des solutions complètes robustes, performantes et sécurisées."
+        "Mon expérience acquise autour de divers domaines et technologies me permet d'orienter les choix d'architecture, d'outils, de conception et de développement, afin de bâtir des solutions complètes robustes, performantes et sécurisées."
     ],
     "summary2": [
         "Architecte développeur sénior ayant une expérience significative pour bâtir des applications sécurisées impliquant diverses technologies. ",
@@ -62,8 +62,8 @@
             "startDate": "3/15/2021",
             "summary": "Direction d’équipe, Architecture, Développement produit.",
             "details": [
-                "Refonte de l'architecture de l'ensemble des développements.",
-                " Conception des stratégies d'intégration dans des produits tiers tels que Salesforce, Zendesk, Genesys, Talkdesk..."
+                "- Refonte d'architecture de l'ensemble des développements (\"FullStack\"). Réingénierie des produits existants.",
+                "- Conception de la stratégie d'intégration dans des produits tiers tels que Salesforce, Zendesk, Genesys, Talkdesk."
             ],
             "details_old": [
                 "ApiRTC est une plateforme de visio conférence et une librairie de développement avec laquelle nous proposons des produits finaux : télémédecine, diagnostique, assistance, intégrés dans les CRMs tels que Salesforce ou Zendesk",
@@ -75,7 +75,6 @@
                 "Visio-Conférence"
             ],
             "skills": [
-                "FullStack",
                 "TypeScript",
                 "React",
                 "Material-UI",
@@ -92,7 +91,8 @@
             "name": "Fractales - Paris",
             "logo": "fractales.webp",
             "startDate": "3/15/2016",
-            "endDate": "3/1/2021",
+            "endDate_a_bit_changed": "(3/1/2021) to make it exactly 5 years instead of 4 years 11 months",
+            "endDate": "3/31/2021",
             "summary": "Conception d'une solution SaaS de partage de données et d’une solution BigData et calculs distribués.",
             "details": [
                 "Responsable de la Factory logicielle complète éditeur, et satisfaction client",
@@ -123,7 +123,7 @@
             "logo": "/tibco.png",
             "startDate": "2010",
             "endDate": "3/15/2016",
-            "summary": "Ecriture de spécifications détaillées, développement d'applications de hautes performances.",
+            "summary": "Ecriture de spécifications détaillées. Développement d'applications hautes performances. Leader technique.",
             "details": [
                 "Définition d'architecture globale d'applications au sein de SI dans les domaines Télécom et bancaires.",
                 "Ecriture de spécifications détaillées, développement, missions d'expertises. Création de processeurs de paiement (gestion transactionelle des balances), de connecteurs d'applications.",
@@ -145,15 +145,14 @@
             ]
         },
         {
-            "title": "Développeur",
+            "title": "Développeur - Architecte",
             "name": "Kabira Technologies - San Mateo, CA",
             "logo": "/kabira.png",
             "startDate": "3/1/2003",
             "endDate": "2010",
-            "summary": "Développement de projets, produits et solutions.",
+            "summary": "Développement de projets, produits et solutions. Conseil auprès de clients et intégrateurs.",
             "details": [
                 "Compréhension des besoins clients, afin de créer et/ou d'améliorer des produits.",
-                "Architecture",
                 "Invention et réalisation du Produit KBM (Business Modeling) afin de développer une solution de 'mobilepayment' en Model Driven Development (génération automatique du code à partir de diagrammes UML) basée sur la plateforme multithread KTP",
                 "Architecture, conseil, direction d'équipe, développement OSDP (provisioning) Orange",
                 "Architecture sur projets Provisioning (KPSA) et Médiation pour SFR, Bouygues",
@@ -180,7 +179,7 @@
             "logo": "/orange.png",
             "startDate": "9/1/2000",
             "endDate": "3/1/2003",
-            "summary": "Concepteur et Développeur d'une solution de Rapid-Application-Development : de la modélisation à la compilation.",
+            "summary": "Concepteur/développeur d'une solution Rapid-Application-Development : de la modélisation à la compilation.",
             "details": [
                 "Projet AdONIS (Advanced OSS for New IP Services, VoIp, Vpn...), suite du sujet du tutorat.",
                 "Conception(UML) et réalisation d’une plateforme de gestion réseaux IP. Développement Bdd&IHM"
@@ -202,7 +201,7 @@
     "educations": [
         {
             "name": "Diplôme d'Ingénieur Informatique",
-            "location": "ENSSAT - Clermont-Ferrand",
+            "location": "ENSSAT - Lannion",
             "dateText": "2001"
         },
         {
