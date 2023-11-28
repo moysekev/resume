@@ -1,6 +1,7 @@
 {
     "firstName": "Kevin",
     "lastName": "Moyse",
+    "age": "45 ans",
     "title": "Architecte Logiciel FullStack",
     "picture": "/kevin-moyse.jpeg",
     "address": [

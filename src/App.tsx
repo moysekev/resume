@@ -23,6 +23,7 @@ import './App.css';
 const {
   firstName,
   lastName,
+  age,
   linkedIn,
   picture,
   title,
@@ -60,7 +61,7 @@ const formatDateText = (startDate: string, endDate?: string) => {
 
 export default function App() {
 
-  const printable = false;
+  const printable = true;
 
   const linkedInId = () => {
     var lastPart = '';
@@ -77,9 +78,11 @@ export default function App() {
   const header = (<Stack sx={{ backgroundColor: '#a0b4c0', p: 2 }}>
     <Stack direction='row' spacing={1}
       alignItems='center' justifyContent='space-between'>
-      <Stack direction='row'>
+      <Stack spacing={1}>
         <Typography variant="h3" fontWeight={700} fontSize={32}>
           {firstName} {lastName}</Typography>
+        <Typography variant="subtitle1">
+          {age}</Typography>
       </Stack>
       <Avatar alt={`${firstName} ${lastName}`} src={picture} sx={{ width: 96, height: 96 }} />
       <Stack spacing={.7}>
