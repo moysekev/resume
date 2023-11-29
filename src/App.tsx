@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
 
 
 import { format, formatDuration, intervalToDuration } from "date-fns";
@@ -76,7 +77,7 @@ export default function App() {
     return lastPart
   }
 
-  const _header = (<Stack sx={{ backgroundColor: green[300], p: 2 }}>
+  const _header = (<Stack sx={{ backgroundColor: green[100], p: 2 }}>
     <Stack direction='row' spacing={1}
       alignItems='center' justifyContent='space-between'>
       <Stack spacing={1}>
@@ -120,10 +121,13 @@ export default function App() {
         </Link>
         <Stack direction='row' alignItems='center'>
           <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
-            <LocationOnIcon fontSize="small" />
+            <LocationOnIcon color="primary" fontSize="small" />
           </ListItemIcon>
           <Stack>
-            {address.map((line, index) => <Typography key={index} variant="subtitle2" component="div">
+            {address.map((line, index) => <Typography key={index}
+              color="primary"
+              variant="subtitle2"
+              component="div">
               {line}
             </Typography>)}
           </Stack>
@@ -140,17 +144,15 @@ export default function App() {
 
   const _positions = positions.map((position, index) =>
     <Stack key={index}>
-      <Stack direction='row' alignItems='center' justifyContent='space-between'>
+      {/* <Stack direction='row' alignItems='center' justifyContent='space-between'>
         <Typography variant="h6">
           {position.title}
         </Typography>
-        {/* <Stack direction='row' alignItems='center' spacing={1}> */}
-          <Chip variant="outlined" color='primary' size="small" label={
-            index === 0 ?
-              'depuis ' + format(Date.parse(position.startDate), "MMMM yyyy", { locale: fr })
-              : formatDateText(position.startDate, position.endDate)
-          } />
-        {/* </Stack> */}
+        <Chip variant="outlined" color='primary' size="small" label={
+          index === 0 ?
+            'depuis ' + format(Date.parse(position.startDate), "MMMM yyyy", { locale: fr })
+            : formatDateText(position.startDate, position.endDate)
+        } />
         <Typography variant="caption" color="primary" component="span">{position.domains?.join(', ')}</Typography>
         <Stack direction='row' spacing={1} alignItems='center'>
           {position.logo && <img src={position.logo} width='24px' alt='' />}
@@ -158,7 +160,33 @@ export default function App() {
             {position.name}
           </Typography>
         </Stack>
-      </Stack>
+      </Stack> */}
+      <Grid container spacing={2}>
+        <Grid xs={4} display="flex" alignItems='center'>
+          <Typography variant="h6">
+            {position.title}
+          </Typography>
+        </Grid>
+        <Grid xs={3} display="flex" alignItems='center'>
+          <Chip variant="outlined" color='primary' size="small" label={
+            index === 0 ?
+              'depuis ' + format(Date.parse(position.startDate), "MMMM yyyy", { locale: fr })
+              : formatDateText(position.startDate, position.endDate)
+          } />
+        </Grid>
+        <Grid xs={2} display="flex" alignItems='center'>
+          <Typography variant="caption" color="primary" component="span">{position.domains?.join(', ')}</Typography>
+        </Grid>
+        <Grid xs={3} display="flex" justifyContent='end'>
+          <Stack direction='row' spacing={1} alignItems='center'>
+            {position.logo && <img src={position.logo} width='24px' alt='' />}
+            <Typography variant="subtitle2">
+              {position.name}
+            </Typography>
+          </Stack>
+        </Grid>
+      </Grid>
+
       <Typography variant="body1" align='justify'>{position.summary}</Typography>
       {index === 0 && <Stack>
         {position.details.map((detail, index) => <Typography variant="body2" align='justify'>
@@ -166,8 +194,6 @@ export default function App() {
         </Typography>)}
       </Stack>}
       <Stack sx={{ mt: .7 }} direction='row' spacing={0.7}>
-        {/* variant="outlined" */}
-        {/* sx={{ bgcolor: '#a5bead' }} */}
         {position.skills?.map((skill, index) => <Chip key={index} color={'light_green' as any} size="small" label={skill} />)}
       </Stack>
     </Stack>);

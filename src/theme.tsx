@@ -6,7 +6,9 @@ import { red } from '@mui/material/colors';
 // https://mdigi.tools/lighten-color/#7a998a
 // Green 7a998a, 50% lighter : #bcccc4
 export const green = {
-  300: '#bcccc4',
+  100: '#ebf0ed', //"85%"
+  200: '#dee5e2', //"75%"
+  300: '#bcccc4', //"50%"
   500: '#7a998a',
   A700: '#3c4e45'
 };
@@ -41,17 +43,33 @@ let theme = createTheme({
       "@media print": {
         fontSize: 13,
       }
+    },
+    subtitle1: {
+      fontSize: 16,
+      "@media print": {
+        fontSize: 15,
+      }
+    },
+    subtitle2: {
+      fontSize: 14,
+      "@media print": {
+        fontSize: 13,
+      }
     }
   },
   components: {
-    // MuiChip: {
-    //   styleOverrides: {
-    //     root: {
-    //       // Some CSS
-    //       backgroundColor: '#b5cfbd'
-    //     },
-    //   }
-    // },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          // Some CSS
+          // backgroundColor: '#b5cfbd',
+          // fontSize: 5,
+          "@media print": {
+            fontSize: 12,
+          }
+        },
+      }
+    },
   },
 });
 
@@ -66,7 +84,7 @@ theme = createTheme(theme, {
     }),
     light_green: theme.palette.augmentColor({
       color: {
-        main: green[300],
+        main: green[200],
       },
       name: 'light_green',
     }),
