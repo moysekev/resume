@@ -77,7 +77,7 @@ export default function App() {
     return lastPart
   }
 
-  const _header = (<Stack sx={{ backgroundColor: green[100], p: 2 }}>
+  const _header = (<Stack sx={{ backgroundColor: green[200], p: 2 }}>
     <Stack direction='row' spacing={1}
       alignItems='center' justifyContent='space-between'>
       <Stack spacing={1}>
