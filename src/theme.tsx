@@ -3,26 +3,45 @@ import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 
 
-// Reeding
-// Green a5bead, 688a7a, 7a998a, 567968, 344c42,  lighter : b5cfbd
-// Blue                  a0b4c0      dark : 254254
+// https://mdigi.tools/lighten-color/#7a998a
+// Green 7a998a, 50% lighter : #bcccc4
+export const green = {
+  300: '#bcccc4',
+  500: '#7a998a',
+  A700: '#3c4e45'
+};
+
+export const blue = {
+  300: '#cfd9df',
+  500: '#a0b4c0',
+  A700: '#465c6a'
+};
+
+// Blue                  a0b4c0 50% light : #cfd9df
 // Red official logo : ec2024,  on kite screenshot : b00717
 
 // A custom theme for this app
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     primary: {
-      main: '#416e88',
+      main: blue.A700,
+    }
+  },
+  typography: {
+    // fontSize: 14,
+    // htmlFontSize: 16,
+    body1: {
+      fontSize: 16,
+      "@media print": {
+        fontSize: 15,
+      }
     },
-    secondary: {
-      main: '#344c42',
-    },
-    info:{
-      main: '#b5cfbd',
-    },
-    error: {
-      main: red.A400,
-    },
+    body2: {
+      fontSize: 14,
+      "@media print": {
+        fontSize: 13,
+      }
+    }
   },
   components: {
     // MuiChip: {
@@ -35,5 +54,29 @@ const theme = createTheme({
     // },
   },
 });
+
+theme = createTheme(theme, {
+  // Custom colors created with augmentColor go here
+  palette: {
+    green: theme.palette.augmentColor({
+      color: {
+        main: green[500],
+      },
+      name: 'green',
+    }),
+    light_green: theme.palette.augmentColor({
+      color: {
+        main: green[300],
+      },
+      name: 'light_green',
+    }),
+  },
+});
+
+// theme.typography.body1 = {
+//   '@media print': {
+//     fontSize: '5',
+//   }
+// }
 
 export default theme;

@@ -60,9 +60,9 @@
             "logo": "/apizee.svg",
             "website": "https://www.apizee.com/",
             "startDate": "3/15/2021",
-            "summary": "Direction d’équipe, Architecture, Développement produit.",
+            "summary": "Direction d’équipe, Développement produit.",
             "details": [
-                "- Refonte d'architecture de l'ensemble des développements (\"FullStack\"). Réingénierie des produits existants.",
+                "- Refonte d'architecture de l'ensemble des développements \"FullStack\". Réingénierie des produits existants.",
                 "- Conception de la stratégie d'intégration dans des produits tiers tels que Salesforce, Zendesk, Genesys, Talkdesk."
             ],
             "details_old": [
@@ -118,7 +118,7 @@
             ]
         },
         {
-            "title": "Architecte Senior",
+            "title": "Architecte",
             "name": "Tibco Software - Paris",
             "logo": "/tibco.png",
             "startDate": "2010",
@@ -135,7 +135,7 @@
                 "Bancaire"
             ],
             "skills": [
-                "JavaEE",
+                "Java EE",
                 "Concurrent Programming",
                 "In-Memory",
                 "Transactions",
@@ -145,7 +145,7 @@
             ]
         },
         {
-            "title": "Développeur - Architecte",
+            "title": "Développeur",
             "name": "Kabira Technologies - San Mateo, CA",
             "logo": "/kabira.png",
             "startDate": "3/1/2003",
@@ -179,7 +179,7 @@
             "logo": "/orange.png",
             "startDate": "9/1/2000",
             "endDate": "3/1/2003",
-            "summary": "Concepteur/développeur d'une solution Rapid-Application-Development : de la modélisation à la compilation.",
+            "summary": "Développeur d'une solution Rapid-Application-Development : de la modélisation à la compilation.",
             "details": [
                 "Projet AdONIS (Advanced OSS for New IP Services, VoIp, Vpn...), suite du sujet du tutorat.",
                 "Conception(UML) et réalisation d’une plateforme de gestion réseaux IP. Développement Bdd&IHM"
@@ -231,10 +231,6 @@
         {
             "name": "snowboard",
             "icon": "/snowboard.svg"
-        },
-        {
-            "name": "vtt",
-            "icon": "/mountain-bike.png"
         }
     ]
 }

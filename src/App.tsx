@@ -19,6 +19,7 @@ import resume from "./data/resume.json";
 
 /* remove margins when printing */
 import './App.css';
+import { blue, green } from "./theme";
 
 const {
   firstName,
@@ -75,7 +76,7 @@ export default function App() {
     return lastPart
   }
 
-  const header = (<Stack sx={{ backgroundColor: '#a0b4c0', p: 2 }}>
+  const _header = (<Stack sx={{ backgroundColor: green[300], p: 2 }}>
     <Stack direction='row' spacing={1}
       alignItems='center' justifyContent='space-between'>
       <Stack spacing={1}>
@@ -143,17 +144,14 @@ export default function App() {
         <Typography variant="h6">
           {position.title}
         </Typography>
-        <Stack direction='row' alignItems='center' spacing={1}>
-          {/* <Typography variant="caption" color="primary" component="span">
-            {formatDateText(position.startDate, position.endDate)}
-          </Typography> */}
-          {index === 0 ?
-            <Chip variant="outlined" color="primary" label={'depuis ' + format(Date.parse(position.startDate), "MMMM yyyy", { locale: fr })} />
-            :
-            <Chip variant="outlined" color="primary" label={formatDateText(position.startDate, position.endDate)} />}
-
-          <Typography variant="caption" color="secondary" component="span">{position.domains?.join(', ')}</Typography>
-        </Stack>
+        {/* <Stack direction='row' alignItems='center' spacing={1}> */}
+          <Chip variant="outlined" color='primary' size="small" label={
+            index === 0 ?
+              'depuis ' + format(Date.parse(position.startDate), "MMMM yyyy", { locale: fr })
+              : formatDateText(position.startDate, position.endDate)
+          } />
+        {/* </Stack> */}
+        <Typography variant="caption" color="primary" component="span">{position.domains?.join(', ')}</Typography>
         <Stack direction='row' spacing={1} alignItems='center'>
           {position.logo && <img src={position.logo} width='24px' alt='' />}
           <Typography variant="subtitle2">
@@ -167,14 +165,14 @@ export default function App() {
           {detail}
         </Typography>)}
       </Stack>}
-      <Stack sx={{ mt: .7 }} direction='row' spacing={0.1}>
+      <Stack sx={{ mt: .7 }} direction='row' spacing={0.7}>
         {/* variant="outlined" */}
         {/* sx={{ bgcolor: '#a5bead' }} */}
-        {position.skills?.map((skill, index) => <Chip key={index} color="info" label={skill} />)}
+        {position.skills?.map((skill, index) => <Chip key={index} color={'light_green' as any} size="small" label={skill} />)}
       </Stack>
     </Stack>);
 
-  const _educations = educations.map((education, index) =>
+  const _educations = (<Stack>{educations.map((education, index) =>
     <Stack key={index} direction='row' spacing={2} alignItems='center'>
       <Typography variant="caption" color="primary" component="span">
         {education.dateText}
@@ -189,24 +187,23 @@ export default function App() {
           </Typography>
         </Stack>
       </Box>
-    </Stack>)
+    </Stack>)}
+  </Stack>);
 
-  const _content = <>
-    {header}
-    <Stack sx={{ mt: 2 }} spacing={3.3}>
-      {_positions}
-      <Stack>
-        {_educations}
-      </Stack>
+  const _leisures = <Box sx={{ display: 'flex', justifyContent: 'center' }} >
+    <Stack direction='row' spacing={2.7} alignItems='center'>
+      {leisures.map((leisures, index) =>
+        <img key={index} src={leisures.icon} width='28px' alt={leisures.name} />
+      )}
     </Stack>
-    <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center' }} >
-      <Stack direction='row' spacing={2.7} alignItems='center'>
-        {leisures.map((leisures, index) =>
-          <img key={index} src={leisures.icon} width='28px' alt={leisures.name} />
-        )}
-      </Stack>
-    </Box>
-  </>;
+  </Box>;
+
+  const _content = <Stack spacing={4.5}>
+    {_header}
+    {_positions}
+    {_educations}
+    {_leisures}
+  </Stack>;
 
   return (
     // <Container maxWidth="lg" sx={{}}>
