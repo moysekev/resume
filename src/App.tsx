@@ -162,19 +162,19 @@ export default function App() {
         </Stack>
       </Stack> */}
       <Grid container spacing={2}>
-        <Grid xs={4} display="flex" alignItems='center'>
-          <Typography variant="h6">
-            {position.title}
-          </Typography>
+        <Grid xs={6} display="flex" alignItems='center'>
+          <Stack direction='row' spacing={2} alignItems='center'>
+            <Typography variant="h6">
+              {position.title}
+            </Typography>
+            <Chip variant="outlined" color='primary' size="small" label={
+              index === 0 ?
+                'depuis ' + format(Date.parse(position.startDate), "MMMM yyyy", { locale: fr })
+                : formatDateText(position.startDate, position.endDate)
+            } />
+          </Stack>
         </Grid>
         <Grid xs={3} display="flex" alignItems='center'>
-          <Chip variant="outlined" color='primary' size="small" label={
-            index === 0 ?
-              'depuis ' + format(Date.parse(position.startDate), "MMMM yyyy", { locale: fr })
-              : formatDateText(position.startDate, position.endDate)
-          } />
-        </Grid>
-        <Grid xs={2} display="flex" alignItems='center'>
           <Typography variant="caption" color="primary" component="span">{position.domains?.join(', ')}</Typography>
         </Grid>
         <Grid xs={3} display="flex" justifyContent='end'>
@@ -186,7 +186,6 @@ export default function App() {
           </Stack>
         </Grid>
       </Grid>
-
       <Typography variant="body1" align='justify'>{position.summary}</Typography>
       {index === 0 && <Stack>
         {position.details.map((detail, index) => <Typography variant="body2" align='justify'>
