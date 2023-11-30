@@ -40,6 +40,8 @@
         "Meteor",
         "AWS",
         "GCP",
+        "GoogleCloud",
+        "OAuth2",
         "CI/CD",
         "GitHub Actions",
         "Jenkins",
@@ -60,7 +62,7 @@
             "logo": "/apizee.svg",
             "website": "https://www.apizee.com/",
             "startDate": "3/15/2021",
-            "summary": "Direction d’équipe, Développement produit.",
+            "summary": "Direction d’équipe, développement produit.",
             "details": [
                 "- Refonte d'architecture de l'ensemble des développements \"FullStack\". Réingénierie des produits existants.",
                 "- Conception de la stratégie d'intégration dans des produits tiers tels que Salesforce, Zendesk, Genesys, Talkdesk."
@@ -81,8 +83,8 @@
                 "Meteor",
                 "NodeJS",
                 "WebRTC",
-                "Oauth2",
-                "GCP",
+                "OAuth2",
+                "GoogleCloud",
                 "GitHub/Lab CI/CD"
             ]
         },
@@ -110,7 +112,7 @@
                 "Spark",
                 "MongoDB",
                 "REST",
-                "AWS",
+                "AmazonWS",
                 "Docker",
                 "Git",
                 "Jenkins",
@@ -169,6 +171,7 @@
                 "Parallelism",
                 "KPSA",
                 "KTP",
+                "Network Protocols",
                 "Unix Shell Scripts",
                 "SVN"
             ]
