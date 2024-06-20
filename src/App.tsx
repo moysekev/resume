@@ -43,7 +43,7 @@ const {
 
 const formatDateText = (startDate: string, endDate?: string) => {
   const dateEnd: Date = endDate ? new Date(Date.parse(endDate)) : new Date();
-  const endDateText: string = endDate ? format(dateEnd, "MMMM yyyy") : "Present";
+  //const endDateText: string = endDate ? format(dateEnd, "MMMM yyyy") : "Present";
 
   return (
     // format(Date.parse(startDate), "MMMM yyyy") +
@@ -65,17 +65,17 @@ export default function App() {
 
   const printable = true;
 
-  const linkedInId = () => {
-    var lastPart = '';
-    var url = linkedIn;
-    if (url !== '') return '';
-    while (lastPart === '') {
-      const n = url.lastIndexOf('/');
-      lastPart = url.substring(n + 1);
-      url = url.substring(0, n);
-    }
-    return lastPart
-  }
+  // const linkedInId = () => {
+  //   var lastPart = '';
+  //   var url = linkedIn;
+  //   if (url !== '') return '';
+  //   while (lastPart === '') {
+  //     const n = url.lastIndexOf('/');
+  //     lastPart = url.substring(n + 1);
+  //     url = url.substring(0, n);
+  //   }
+  //   return lastPart
+  // }
 
   const _header = (<Stack sx={{ backgroundColor: green[200], p: 2 }}>
     <Stack direction='row' spacing={1}
@@ -86,16 +86,16 @@ export default function App() {
         <Typography variant="subtitle1">
           {age}</Typography>
       </Stack>
-      <Avatar alt={`${firstName} ${lastName}`} src={picture} sx={{ width: 96, height: 96 }} />
+      <Avatar alt={`${firstName} ${lastName}`} src={new URL(picture, import.meta.url).href} sx={{ width: 96, height: 96 }} />
       <Stack spacing={.7}>
         {linkedIn && linkedIn !== '' &&
           <Link underline="hover" href={linkedIn}>
             <Stack direction='row' alignItems='center'>
               <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
-                <img src={'/linkedin.png'} width='24px' alt='' />
+                <img src={new URL('linkedin.png', import.meta.url).href} width='24px' alt='' />
               </ListItemIcon>
               <Typography variant="subtitle2" fontWeight={700}>
-                {linkedInId()}
+                {linkedIn.substring(linkedIn.lastIndexOf('/') + 1)}
               </Typography>
             </Stack>
           </Link>}
@@ -155,7 +155,7 @@ export default function App() {
         } />
         <Typography variant="caption" color="primary" component="span">{position.domains?.join(', ')}</Typography>
         <Stack direction='row' spacing={1} alignItems='center'>
-          {position.logo && <img src={position.logo} width='24px' alt='' />}
+          {position.logo && <img src={new URL(position.logo, import.meta.url).href} width='24px' alt='' />}
           <Typography variant="subtitle2">
             {position.name}
           </Typography>
@@ -170,6 +170,8 @@ export default function App() {
             <Chip variant="outlined" color='primary' size="small" label={
               index === 0 ?
                 'depuis ' + format(Date.parse(position.startDate), "MMMM yyyy", { locale: fr })
+                // commented out, otherwise the resume must be updated every month but this is not possible when printed ;)
+                // + ', ' + formatDateText(position.startDate, position.endDate)
                 : formatDateText(position.startDate, position.endDate)
             } />
           </Stack>
@@ -179,7 +181,7 @@ export default function App() {
         </Grid>
         <Grid xs={3} display="flex" justifyContent='end'>
           <Stack direction='row' spacing={1} alignItems='center'>
-            {position.logo && <img src={position.logo} width='24px' alt='' />}
+            {position.logo && <img src={new URL(position.logo, import.meta.url).href} width='24px' alt='' />}
             <Typography variant="subtitle2">
               {position.name}
             </Typography>
@@ -218,7 +220,7 @@ export default function App() {
   const _leisures = <Box sx={{ display: 'flex', justifyContent: 'center' }} >
     <Stack direction='row' spacing={2.7} alignItems='center'>
       {leisures.map((leisures, index) =>
-        <img key={index} src={leisures.icon} width='28px' alt={leisures.name} />
+        <img key={index} src={new URL(leisures.icon, import.meta.url).href} width='28px' alt={leisures.name} />
       )}
     </Stack>
   </Box>;
