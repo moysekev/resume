@@ -58,8 +58,11 @@
     "positions": [
         {
             "title": "Architecte Solutions",
-            "name": "Apizee - Lannion",
-            "logo": "apizee.svg",
+            "name": "BouyguesTelecom Apizee - Lannion",
+            "logos": [
+                "bt.png",
+                "apizee.svg"
+            ],
             "website": "https://www.apizee.com/",
             "startDate": "3/15/2021",
             "summary": "Direction d’équipe, développement produit.",

@@ -182,6 +182,7 @@ export default function App() {
         <Grid xs={3} display="flex" justifyContent='end'>
           <Stack direction='row' spacing={1} alignItems='center'>
             {position.logo && <img src={new URL(position.logo, import.meta.url).href} width='24px' alt='' />}
+            {position.logos && position.logos.map((logo, index) => <img key={index} src={new URL(logo, import.meta.url).href} width='24px' alt='' />)}
             <Typography variant="subtitle2">
               {position.name}
             </Typography>
@@ -190,7 +191,7 @@ export default function App() {
       </Grid>
       <Typography variant="body1" align='justify'>{position.summary}</Typography>
       {index === 0 && <Stack>
-        {position.details.map((detail, index) => <Typography variant="body2" align='justify'>
+        {position.details.map((detail, index) => <Typography key={index} variant="body2" align='justify'>
           {detail}
         </Typography>)}
       </Stack>}
@@ -238,7 +239,7 @@ export default function App() {
     <Box display="flex"
       justifyContent='center'
       alignItems='center'>
-      {printable ? <Box sx={{ width: "21cm", p: 4 }}>
+      {printable ? <Box sx={{ width: "21cm", p: 2 }}>
         {_content}
       </Box> :
         //  height: "29.7cm"
