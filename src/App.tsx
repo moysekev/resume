@@ -189,7 +189,7 @@ export default function App() {
         </Grid>
       </Grid>
       <Typography variant="body1" align='justify'>{position.summary}</Typography>
-      {index === 0 && <Stack>
+      {index === 0 && <Stack sx={{ ml: 1 }}>
         {position.details.map((detail, index) => <Typography key={index} variant="body2" align='justify'>
           {detail}
         </Typography>)}

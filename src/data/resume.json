@@ -67,8 +67,9 @@
             "startDate": "3/15/2021",
             "summary": "Direction d’équipe, développement produit.",
             "details": [
-                "Refonte d'architecture de l'ensemble des développements \"FullStack\". Réingénierie des produits existants.",
-                "Conception de la stratégie d'intégration dans des produits tiers tels que Salesforce, Zendesk, Genesys, Talkdesk."
+                "Refonte d'architecture et de conception de l'ensemble des développements \"FullStack\".",
+                "Conception de la stratégie d'intégration dans des produits tiers tels que Salesforce, Zendesk, ServiceNow, Talkdesk.",
+                "Définition de la stack logicelle, choix des outils, des technologies, des méthodes de développement."
             ],
             "details_old": [
                 "ApiRTC est une plateforme de visio conférence et une librairie de développement avec laquelle nous proposons des produits finaux : télémédecine, diagnostic, assistance, intégrés dans les CRMs tels que Salesforce ou Zendesk",
