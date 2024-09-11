@@ -81,16 +81,16 @@
                 "Visio-Conférence"
             ],
             "skills": [
-                "Event-Driven",
+                "EventDriven",
                 "Microservices",
                 "React",
-                "Meteor",
-                "Node.js",
-                "TypeScript",
+                "MaterialUI",
+                "NodeJs",
                 "Docker",
                 "Kafka",
                 "MongoDB",
-                "GitHub/Lab CI/CD"
+                "GoogleCloud",
+                "Gitlab CI/CD"
             ],
             "skills_old": [
                 "TypeScript",
