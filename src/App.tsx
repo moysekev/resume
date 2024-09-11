@@ -5,8 +5,7 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
-
+import Grid from '@mui/material/Grid2'; // Grid version 2
 
 import { format, formatDuration, intervalToDuration } from "date-fns";
 
@@ -162,7 +161,7 @@ export default function App() {
         </Stack>
       </Stack> */}
       <Grid container spacing={2}>
-        <Grid xs={6} display="flex" alignItems='center'>
+        <Grid size={6} display="flex" alignItems='center'>
           <Stack direction='row' spacing={2} alignItems='center'>
             <Typography variant="h6">
               {position.title}
@@ -176,10 +175,10 @@ export default function App() {
             } />
           </Stack>
         </Grid>
-        <Grid xs={3} display="flex" alignItems='center'>
+        <Grid size={3} display="flex" alignItems='center'>
           <Typography variant="caption" color="primary" component="span">{position.domains?.join(', ')}</Typography>
         </Grid>
-        <Grid xs={3} display="flex" justifyContent='end'>
+        <Grid size={3} display="flex" justifyContent='end'>
           <Stack direction='row' spacing={1} alignItems='center'>
             {position.logo && <img src={new URL(position.logo, import.meta.url).href} width='24px' alt='' />}
             {position.logos && position.logos.map((logo, index) => <img key={index} src={new URL(logo, import.meta.url).href} width='24px' alt='' />)}
