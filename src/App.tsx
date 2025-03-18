@@ -87,7 +87,7 @@ export default function App() {
           {age}</Typography>
       </Stack>
       <Avatar alt={`${firstName} ${lastName}`} src={new URL(picture, import.meta.url).href} sx={{ width: 96, height: 96 }} />
-      <Stack spacing={.7}>
+      <Stack>
         {linkedIn && linkedIn !== '' &&
           <Link underline="hover" href={linkedIn}>
             <Stack direction='row' alignItems='center'>
@@ -231,7 +231,7 @@ export default function App() {
     </Stack>
   </Box>;
 
-  const _content = <Stack spacing={2.7}>
+  const _content = <Stack spacing={2.5}>
     {_header}
     {_positions}
     {_educations}

@@ -17,10 +17,9 @@
         "J'ai de solides bases en Java, NodeJS, DevOps. Je sais apporter mes compétences à une équipe de developpement."
     ],
     "summary": [
-        "Je suis en poste actuellement en tant qu'Architecte Produits et Directeur Technique chez l'éditeur Apizee.",
-        "Avec plus de 20 ans d'expérience dans divers domaines telecom, bancaire, et assurance, je sais m'adapter aux environnements et technologies nouvelles.",
-        "J'ai travaillé sur des projets d'envergure à dimension internationale qui m'ont passionné pour le développement de qualité où securité et performance sont pensés dès le design.",
-        "Je recherche un cadre d'innovation..."
+        "Actuellement Architecte Produits et Directeur Technique chez Apizee, j'ai plus de 20 ans d'expérience dans les secteurs des télécommunications, de la banque et de l'assurance.",
+        "Passionné d'innovation, je m'adapte facilement aux nouvelles technologies. J'ai participé à des projets internationaux qui ont renforcé mon intérêt pour le développement de solutions de qualité, intégrant sécurité et performance dès la conception.",
+        "Je mets à profit mes compétences techniques et humaines pour piloter les projets informatiques ambitieux au sein de votre entreprise."
     ],
     "summary_en": [
         "Senior level developer architect with extensive experience building secure applications using a wide range of technologies.",
@@ -100,7 +99,7 @@
             "website": "https://www.apizee.com/",
             "startDate": "3/15/2021",
             "summary_": "Direction Technique, Architecture produit.",
-            "summary": "Direction de la refonte d'architecture et du développements d'un produit SaaS de visio-assistance.",
+            "summary": "Direction de la refonte de l'architecture et du développement full-stack d'un produit SaaS de visio-assistance.",
             "details_": [
                 "Refonte d'architecture et de l'ensemble des développements FullStack de produits SaaS de Visio-assistance.",
                 "Développement d'une couche d'abstraction entre plateforme et technologie logicielle produit.",
@@ -166,7 +165,7 @@
             "logo": "tibco.png",
             "startDate": "2010",
             "endDate": "3/15/2016",
-            "summary": "Ecriture de spécifications détaillées. Développement d'applications hautes performances. Leader technique.",
+            "summary": "Leader technique. Rédaction de spécifications. Développement d'applications hautes performances.",
             "details": [
                 "Définition d'architecture globale d'applications au sein de SI dans les domaines Télécom et bancaires.",
                 "Ecriture de spécifications détaillées, développement, missions d'expertises. Création de processeurs de paiement (gestion transactionelle des balances), de connecteurs d'applications.",
@@ -193,7 +192,7 @@
             "logo": "kabira.png",
             "startDate": "3/1/2003",
             "endDate": "2010",
-            "summary": "Conception et Développement de projets, produits et solutions. Conseil auprès de clients et intégrateurs.",
+            "summary": "Conception et développement de projets, produits et solutions. Conseil auprès de clients et intégrateurs.",
             "details": [
                 "Compréhension des besoins clients, afin de créer et/ou d'améliorer des produits.",
                 "Invention et réalisation du Produit KBM (Business Modeling) afin de développer une solution de 'mobilepayment' en Model Driven Development (génération automatique du code à partir de diagrammes UML) basée sur la plateforme multithread KTP",
