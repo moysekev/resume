@@ -34,6 +34,7 @@ const {
   phone,
   website,
   skills,
+  strongSkills,
   positions,
   educations,
   leisures
@@ -136,9 +137,12 @@ export default function App() {
     <Divider>
       <Typography variant="overline" fontWeight={700}>{title}</Typography>
     </Divider>
-    <Typography variant="body1" align='justify'>
+    {summary.map((line, index) => <Typography key={index} variant="body1" align='justify'>
+          {line}
+        </Typography>)}
+    {/* <Typography variant="body1" align='justify'>
       {summary}
-    </Typography>
+    </Typography> */}
   </Stack>);
 
   const _positions = positions.map((position, index) =>
@@ -189,13 +193,15 @@ export default function App() {
         </Grid>
       </Grid>
       <Typography variant="body1" align='justify'>{position.summary}</Typography>
-      {index === 0 && <Stack sx={{ ml: 1 }}>
+      {index === 0 && position.details && <Stack sx={{ ml: 1 }}>
         {position.details.map((detail, index) => <Typography key={index} variant="body2" align='justify'>
           {detail}
         </Typography>)}
       </Stack>}
-      <Stack sx={{ mt: .7 }} direction='row' spacing={0.7}>
-        {position.skills?.map((skill, index) => <Chip key={index} color={'light_green' as any} size="small" label={skill} />)}
+      <Stack sx={{
+        mt: .7, alignItems: 'center'
+      }} direction='row' spacing={0.7}>
+        {position.skills?.map((skill, index) => <Chip sx={{ fontWeight: strongSkills.includes(skill) ? 'bold' : 'regular' }} key={index} color={'light_green' as any} size={strongSkills.includes(skill) ? "medium" : "small"} label={skill} />)}
       </Stack>
     </Stack>);
 
@@ -219,8 +225,8 @@ export default function App() {
 
   const _leisures = <Box sx={{ display: 'flex', justifyContent: 'center' }} >
     <Stack direction='row' spacing={2.7} alignItems='center'>
-      {leisures.map((leisures, index) =>
-        <img key={index} src={new URL(leisures.icon, import.meta.url).href} width='28px' alt={leisures.name} />
+      {leisures.map((leisure, index) =>
+        <img key={index} src={new URL(leisure.icon, import.meta.url).href} width='28px' alt={leisure.name} />
       )}
     </Stack>
   </Box>;
