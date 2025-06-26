@@ -22,6 +22,7 @@ import resume from "./data/resume.json";
 /* remove margins when printing */
 import './App.css';
 import { blue, green } from "./theme";
+import { Container, useMediaQuery } from "@mui/material";
 
 const {
   firstName,
@@ -102,7 +103,7 @@ export default function App() {
               <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
                 <img src={new URL('linkedin.png', import.meta.url).href} width='24px' alt='' />
               </ListItemIcon>
-              <Typography variant="subtitle2" fontWeight={700}>
+              <Typography variant="subtitle2" fontWeight={700} sx={{ fontSize: { xs: '.6rem', md: '.8rem' } }} >
                 {linkedIn.substring(linkedIn.lastIndexOf('/') + 1)}
               </Typography>
             </Stack>
@@ -112,7 +113,7 @@ export default function App() {
             <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
               <EmailIcon fontSize="small" />
             </ListItemIcon>
-            <Typography variant="subtitle2" fontWeight={700}>
+            <Typography variant="subtitle2" fontWeight={700} sx={{ fontSize: { xs: '.6rem', md: '.8rem' } }}>
               {email}
             </Typography>
           </Stack>
@@ -122,7 +123,7 @@ export default function App() {
             <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
               <PhoneIcon fontSize="small" />
             </ListItemIcon>
-            <Typography variant="subtitle2" fontWeight={700}>
+            <Typography variant="subtitle2" fontWeight={700} sx={{ fontSize: { xs: '.6rem', md: '.8rem' } }}>
               {phone}
             </Typography>
           </Stack>
@@ -133,6 +134,7 @@ export default function App() {
           </ListItemIcon>
           <Stack>
             {address.map((line, index) => <Typography key={index}
+              sx={{ fontSize: { xs: '.6rem', md: '.8rem' } }}
               color="primary"
               variant="subtitle2"
               component="div">
@@ -173,7 +175,7 @@ export default function App() {
         </Stack>
       </Stack> */}
       <Grid container spacing={2}>
-        <Grid size={6} display="flex" alignItems='center'>
+        <Grid size={{ xs: 12, sm: 6 }} display="flex" alignItems='center'>
           <Stack direction='row' spacing={2} alignItems='center'>
             <Typography variant="h6">
               {position.title}
@@ -187,16 +189,16 @@ export default function App() {
             } />
           </Stack>
         </Grid>
-        <Grid size={3} display="flex" alignItems='center'>
-          <Typography variant="caption" color="primary" component="span">{position.domains?.join(', ')}</Typography>
-        </Grid>
-        <Grid size={3} display="flex" justifyContent='end'>
-          <Stack direction='row' spacing={1} alignItems='center'>
-            <Typography variant="subtitle2">
-              {position.name}
-            </Typography>
-            {position.logo && <img src={new URL(position.logo, import.meta.url).href} width='24px' alt='' />}
-            {/* {position.logos && position.logos.map((logo, index) => <img key={index} src={new URL(logo, import.meta.url).href} width='24px' alt='' />)} */}
+        <Grid size={{ xs: 12, sm: 6 }} display="flex" alignItems='center'>
+          <Stack direction='row' spacing={2} alignItems='center' justifyContent="space-between">
+            <Typography variant="caption" color="primary" component="span">{position.domains?.join(', ')}</Typography>
+            <Stack direction='row' spacing={1} alignItems='center'>
+              <Typography variant="subtitle2">
+                {position.name}
+              </Typography>
+              {position.logo && <img src={new URL(position.logo, import.meta.url).href} width='24px' alt='' />}
+              {/* {position.logos && position.logos.map((logo, index) => <img key={index} src={new URL(logo, import.meta.url).href} width='24px' alt='' />)} */}
+            </Stack>
           </Stack>
         </Grid>
       </Grid>
@@ -279,11 +281,13 @@ export default function App() {
     </Stack>
   </Box>;
 
+  const isMobile = useMediaQuery('(max-width:600px)');
+
   const _content = <Stack spacing={0.7}>
     {_header}
     <Grid container spacing={2}>
       <Grid sx={{ mt: 2 }}
-        size={{ xs: 4 }}>
+        size={{ xs: 12, sm: 4 }}>
         <Stack direction="column" spacing={4}
           sx={{
             height: '100%',
@@ -296,7 +300,7 @@ export default function App() {
           {_leisures}
         </Stack>
       </Grid>
-      <Grid size={{ xs: 8 }}>
+      <Grid size={{ xs: 12, sm: 8 }}>
         <Stack spacing={2}>
           {_positions}
           <Divider variant="middle" />
@@ -309,16 +313,24 @@ export default function App() {
   return (
     // <Container maxWidth="lg" sx={{}}>
     // Use a Box instead to center Paper inside it
-    <Box display="flex"
-      justifyContent='center'
-      alignItems='center'>
-      {printable ? <Box sx={{ width: "21cm", p: 2 }}>
+    // maxWidth="sm" sx={{ overflowX: 'hidden' }}
+    <Container maxWidth={isMobile ? "sm" : undefined} sx={{
+      overflowX: 'hidden',
+      width: isMobile ? undefined : "21cm"
+    }}>
+      <Box display={isMobile ? undefined : "flex"}
+        flexDirection="column"
+        justifyContent='center'
+        alignItems='center'>
         {_content}
-      </Box> :
-        //  height: "29.7cm"
-        <Paper sx={{ width: "21cm", p: 4 }}>
-          {_content}
-        </Paper>}
-    </Box >
+      </Box >
+    </Container>
   );
 }
+
+//  {printable ?
+{/* <Box sx={{ width: isMobile ? undefined : "21cm", p: 2 }}></Box> */ }
+{/* //  height: "29.7cm"
+          <Paper sx={{ width: "21cm", p: 4 }}>
+            {_content}
+          </Paper>} */}

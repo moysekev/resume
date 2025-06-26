@@ -111,7 +111,7 @@
     "positions": [
         {
             "title": "Directeur Technique",
-            "name": "BouyguesTelecom Apizee - Lannion",
+            "name": "BouyguesTel Apizee, Lannion",
             "logo": "bt.png",
             "logos_COMMENTED-OUT": [
                 "bt.png",
@@ -154,7 +154,7 @@
         },
         {
             "title": "Directeur informatique",
-            "name": "Fractales - Paris",
+            "name": "Fractales, Paris",
             "logo": "fractales.webp",
             "startDate": "3/15/2016",
             "endDate_a_bit_changed": "(3/1/2021) to make it exactly 5 years instead of 4 years 11 months",
@@ -186,7 +186,7 @@
         },
         {
             "title": "Global Architect",
-            "name": "Tibco Software - Paris",
+            "name": "Tibco Software, Paris",
             "logo": "tibco.png",
             "startDate": "2010",
             "endDate": "3/15/2016",
@@ -213,7 +213,7 @@
         },
         {
             "title": "Software Architect",
-            "name": "Kabira Technologies - San Mateo CA",
+            "name": "Kabira Technologies, San Mateo CA",
             "logo": "kabira.png",
             "startDate": "3/1/2003",
             "endDate": "2010",
@@ -243,7 +243,7 @@
         },
         {
             "title": "Ingénieur Logiciel R&D",
-            "name": "Orange - Lannion",
+            "name": "Orange, Lannion",
             "logo": "orange.png",
             "startDate": "9/1/2000",
             "endDate": "3/1/2003",
@@ -302,10 +302,6 @@
         {
             "name": "Anglais",
             "details": "Toeic 810, then worked for 12+ years in international companies"
-        },
-        {
-            "name": "Espagnol",
-            "details": "nivel escolar"
         }
     ],
     "leisures": [
