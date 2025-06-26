@@ -90,9 +90,9 @@ export default function App() {
     <Stack direction='row' spacing={1}
       alignItems='center' justifyContent='space-between'>
       <Stack spacing={1}>
-        <Typography variant="h3" fontWeight={700} fontSize={32}>
+        <Typography variant="h3" fontWeight={700} sx={{ fontSize: { xs: '1.5rem', sm: '2rem' } }}>
           {firstName} {lastName}</Typography>
-        <Typography variant="subtitle1">
+        <Typography variant="subtitle1" sx={{ fontSize: { xs: '.8rem', sm: '1rem' } }}>
           {age}</Typography>
       </Stack>
       <Avatar alt={`${firstName} ${lastName}`} src={new URL(picture, import.meta.url).href} sx={{ width: 96, height: 96 }} />
@@ -103,7 +103,7 @@ export default function App() {
               <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
                 <img src={new URL('linkedin.png', import.meta.url).href} width='24px' alt='' />
               </ListItemIcon>
-              <Typography variant="subtitle2" fontWeight={700} sx={{ fontSize: { xs: '.6rem', md: '.8rem' } }} >
+              <Typography variant="subtitle2" fontWeight={700} sx={{ fontSize: { xs: '.6rem', sm: '.8rem' } }} >
                 {linkedIn.substring(linkedIn.lastIndexOf('/') + 1)}
               </Typography>
             </Stack>
@@ -113,7 +113,7 @@ export default function App() {
             <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
               <EmailIcon fontSize="small" />
             </ListItemIcon>
-            <Typography variant="subtitle2" fontWeight={700} sx={{ fontSize: { xs: '.6rem', md: '.8rem' } }}>
+            <Typography variant="subtitle2" fontWeight={700} sx={{ fontSize: { xs: '.6rem', sm: '.8rem' } }}>
               {email}
             </Typography>
           </Stack>
@@ -145,7 +145,7 @@ export default function App() {
       </Stack>
     </Stack>
     <Divider>
-      <Typography variant="overline" fontWeight={700}>{title}</Typography>
+      <Typography variant="overline" fontWeight={700} sx={{ fontSize: { xs: '.6rem', sm: '1rem' } }}>{title}</Typography>
     </Divider>
     {summary.map((line, index) => <Typography key={index} variant="body1" align='justify'>
       {line}
@@ -174,26 +174,26 @@ export default function App() {
           </Typography>
         </Stack>
       </Stack> */}
-      <Grid container spacing={2}>
-        <Grid size={{ xs: 12, sm: 6 }} display="flex" alignItems='center'>
-          <Stack direction='row' spacing={2} alignItems='center'>
+      <Grid container spacing={{ xs: .2, sm: 2 }}>
+        <Grid size={{ xs: 12, sm: 6 }}>
+          <Stack direction='row' spacing={2} alignItems='center' justifyContent="space-between">
             <Typography variant="h6">
               {position.title}
             </Typography>
             <Chip variant="outlined" color='primary' size="small" label={
               index === 0 ?
-                'depuis ' + format(Date.parse(position.startDate), "MMMM yyyy", { locale: fr })
+                '🗓️ ' + format(Date.parse(position.startDate), "MMMM yyyy", { locale: fr })
                 // commented out, otherwise the resume must be updated every month but this is not possible when printed ;)
                 // + ', ' + formatDateText(position.startDate, position.endDate)
                 : formatDateText(position.startDate, position.endDate)
             } />
           </Stack>
         </Grid>
-        <Grid size={{ xs: 12, sm: 6 }} display="flex" alignItems='center'>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <Stack direction='row' spacing={2} alignItems='center' justifyContent="space-between">
             <Typography variant="caption" color="primary" component="span">{position.domains?.join(', ')}</Typography>
             <Stack direction='row' spacing={1} alignItems='center'>
-              <Typography variant="subtitle2">
+              <Typography color="primary" variant="subtitle2">
                 {position.name}
               </Typography>
               {position.logo && <img src={new URL(position.logo, import.meta.url).href} width='24px' alt='' />}
@@ -208,7 +208,7 @@ export default function App() {
           {detail}
         </Typography>)}
       </Stack>}
-      <Stack sx={{
+      {/* <Stack sx={{
         alignItems: 'center'
       }} direction='row' spacing={0.3}>
         {position.skills?.map((skill, index) =>
@@ -217,20 +217,20 @@ export default function App() {
               // avatar={hasProperty(logos, skill) ? <Avatar alt={skill} src={new URL((logos as any)[skill], import.meta.url).href} /> : undefined}
               // icon={hasProperty(logos, skill) ? <SvgI alt={skill} src={new URL("angular.png", import.meta.url).href} /> : undefined}
               label={hasProperty(logos, skill) ? undefined : skill} />)}
-      </Stack>
+      </Stack> */}
     </Stack>);
 
   const _educations = (<Stack>{educations.map((education, index) =>
-    <Stack key={index} direction='row' spacing={2} alignItems='center'>
-      <Typography variant="caption" color="primary" component="span">
+    <Stack key={index} direction='row' spacing={1} alignItems='center'>
+      <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>
         {education.dateText}
       </Typography>
       <Box sx={{ width: '100%' }}>
         <Stack direction='row' justifyContent='space-between'>
-          <Typography variant="subtitle1">
+          <Typography variant="subtitle1" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>
             {education.name}
           </Typography>
-          <Typography variant="subtitle2">
+          <Typography variant="subtitle2" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>
             {education.location}
           </Typography>
         </Stack>
@@ -297,7 +297,7 @@ export default function App() {
           {_skills}
           {/* <Divider variant="middle" /> */}
           {_languages}
-          {_leisures}
+          {!isMobile && _leisures}
         </Stack>
       </Grid>
       <Grid size={{ xs: 12, sm: 8 }}>
@@ -305,6 +305,7 @@ export default function App() {
           {_positions}
           <Divider variant="middle" />
           {_educations}
+          {isMobile && _leisures}
         </Stack>
       </Grid>
     </Grid>
