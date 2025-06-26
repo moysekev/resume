@@ -31,58 +31,78 @@
     "phone": "0689666498",
     "skills": [
         "Angular",
-        "ApiGateway",
         "APIs",
+        "ApiGateways",
         "AWS",
-        "Bootstrap",
-        "CI/CD",
-        "CleanArchitecture",
+        "Architecture",
+        "Domain-Driven",
+        "Event-Driven",
         "Docker",
-        "DomainDrivenDev",
-        "EventDriven",
-        "Express",
         "FullStack",
-        "GCP",
         "Git",
-        "GitHub/lab",
-        "Gitlab CI/CD",
-        "GitHub Actions",
+        "GitHub/lab CI/CD",
         "Golang",
         "GoogleCloud",
         "IAM",
-        "JavaScript",
-        "Java/TypeScript",
+        "Java",
+        "Javascript",
         "Jenkins",
         "Jira, Confluence",
         "jQuery",
         "Kafka",
+        "Keycloak",
+        "Linux",
         "MaterialUI",
         "Meteor",
         "Microservices",
         "MongoDB",
         "MySQL",
+        "NextJS",
         "NodeJS",
         "Nginx",
         "OAuth2",
         "Oracle",
-        "OVHCloud",
-        "OVH/Google-Cloud",
+        "GoogleCloud",
         "Prometheus",
         "Python",
         "REST",
         "React",
         "SonarQube",
         "Typescript",
-        "Web API",
+        "Ubuntu",
         "WebRTC"
     ],
+    "logos": {
+        "Angular": "angular.png",
+        "AWS": "aws.png",
+        "Docker": "docker-mark-blue.svg",
+        "Git": "git.png",
+        "Golang": "Go-Logo_Blue.svg",
+        "GoogleCloud": "google-cloud.png",
+        "Java": "java.png",
+        "Javascript": "javascript.png",
+        "Keycloak": "keycloak.png",
+        "Linux": "linux.png",
+        "Meteor": "meteor.png",
+        "MongoDB": "mongodb.png",
+        "NextJS": "nextjs.png",
+        "NodeJS": "nodejs.png",
+        "Python": "python.png",
+        "React": "react.png",
+        "Typescript": "typescript.png",
+        "Ubuntu": "ubuntu.png",
+        "WebRTC": "webrtc.png"
+    },
     "strongSkills": [
-        "C/C++",
+        "Angular",
+        "Architecture",
+        "Golang",
         "Java",
         "Java Spring",
         "Java EE",
         "Python",
-        "TypeScript"
+        "React",
+        "Typescript"
     ],
     "website": "",
     "linkedIn": "https://www.linkedin.com/in/kevin-moyse-3352bb29",
@@ -90,9 +110,10 @@
     "github": "https://github.com/moysekev",
     "positions": [
         {
-            "title": "Architecte Produits",
+            "title": "Directeur Technique",
             "name": "BouyguesTelecom Apizee - Lannion",
-            "logos": [
+            "logo": "bt.png",
+            "logos_COMMENTED-OUT": [
                 "bt.png",
                 "apizee.svg"
             ],
@@ -116,16 +137,19 @@
                 "Visio-Conférence"
             ],
             "skills": [
-                "APIs",
-                "Docker",
+                "Architecture",
                 "FullStack",
-                "MongoDb",
-                "NodeJs",
-                "Oauth2",
-                "OVH/GoogleCloud",
-                "TypeScript",
+                "APIs",
+                "WebRTC",
+                "Golang",
+                "Typescript",
+                "GoogleCloud",
+                "NextJS",
+                "NodeJS",
                 "React",
-                "CI/CD"
+                "MongoDB",
+                "Keycloak",
+                "OAuth2"
             ]
         },
         {
@@ -146,16 +170,17 @@
                 "Actuariat"
             ],
             "skills": [
+                "Architecture",
+                "Java",
                 "Java Spring",
+                "Jenkins",
                 "Angular",
                 "Python",
                 "Spark",
                 "MongoDB",
-                "REST",
-                "AmazonWS",
+                "AWS",
                 "Docker",
                 "Git",
-                "Jenkins",
                 "SonarQube"
             ]
         },
@@ -177,18 +202,18 @@
                 "Bancaire"
             ],
             "skills": [
+                "Java",
                 "Java EE",
                 "Concurrent Programming",
                 "In-Memory",
-                "Transactions",
                 "High Availability",
                 "Performances",
                 "Security"
             ]
         },
         {
-            "title": "Architecte",
-            "name": "Kabira Technologies - Paris - San Mateo, CA",
+            "title": "Software Architect",
+            "name": "Kabira Technologies - San Mateo CA",
             "logo": "kabira.png",
             "startDate": "3/1/2003",
             "endDate": "2010",
@@ -243,6 +268,21 @@
     ],
     "educations": [
         {
+            "name": "Communication : Travailler ensemble en confiance",
+            "location": "B-Flower",
+            "dateText": "2023"
+        },
+        {
+            "name": "Les fondamentaux des instruments financiers",
+            "location": "EFE - Paris",
+            "dateText": "2016"
+        },
+        {
+            "name": "Java, concurrent programming, Swing, JavaEE",
+            "location": "Ociensa Technologies",
+            "dateText": "2012"
+        },
+        {
             "name": "Diplôme d'Ingénieur Informatique",
             "location": "ENSSAT - Lannion",
             "dateText": "2001"
@@ -256,6 +296,16 @@
             "name": "Baccalauréat S (option TI)",
             "location": "LEGT La Fayette - Clermont-Ferrand",
             "dateText": "1996"
+        }
+    ],
+    "languages": [
+        {
+            "name": "Anglais",
+            "details": "Toeic 810, then worked for 12+ years in international companies"
+        },
+        {
+            "name": "Espagnol",
+            "details": "nivel escolar"
         }
     ],
     "leisures": [

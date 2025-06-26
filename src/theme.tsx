@@ -33,28 +33,31 @@ let theme = createTheme({
     // fontSize: 14,
     // htmlFontSize: 16,
     body1: {
-      fontSize: 16,
+      fontSize: 12,
       "@media print": {
-        fontSize: 15,
+        fontSize: 12,
       }
     },
-    body2: {
+    // body2: {
+    //   fontSize: 14,
+    //   "@media print": {
+    //     fontSize: 13,
+    //   }
+    // },
+    subtitle1: {
       fontSize: 14,
       "@media print": {
-        fontSize: 13,
-      }
-    },
-    subtitle1: {
-      fontSize: 16,
-      "@media print": {
-        fontSize: 15,
+        fontSize: 14,
       }
     },
     subtitle2: {
-      fontSize: 14,
+      fontSize: 12,
       "@media print": {
-        fontSize: 13,
+        fontSize: 12,
       }
+    },
+    h6: {
+      fontSize: 14,
     }
   },
   components: {
@@ -63,9 +66,9 @@ let theme = createTheme({
         root: {
           // Some CSS
           // backgroundColor: '#b5cfbd',
-          // fontSize: 5,
+          fontSize: 10,
           "@media print": {
-            fontSize: 12,
+            fontSize: 10,
           }
         },
       }

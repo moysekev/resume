@@ -14,7 +14,9 @@ import Chip from '@mui/material/Chip';
 import Divider from "@mui/material/Divider";
 import Paper from "@mui/material/Paper";
 import Stack from '@mui/material/Stack';
+
 import fr from "date-fns/locale/fr";
+
 import resume from "./data/resume.json";
 
 /* remove margins when printing */
@@ -34,9 +36,11 @@ const {
   phone,
   website,
   skills,
+  logos,
   strongSkills,
   positions,
   educations,
+  languages,
   leisures
 } = resume;
 
@@ -59,6 +63,10 @@ const formatDateText = (startDate: string, endDate?: string) => {
     )
     // +")"
   );
+};
+
+const hasProperty = (obj: any, prop: string): boolean => {
+  return prop in obj;
 };
 
 export default function App() {
@@ -138,8 +146,8 @@ export default function App() {
       <Typography variant="overline" fontWeight={700}>{title}</Typography>
     </Divider>
     {summary.map((line, index) => <Typography key={index} variant="body1" align='justify'>
-          {line}
-        </Typography>)}
+      {line}
+    </Typography>)}
     {/* <Typography variant="body1" align='justify'>
       {summary}
     </Typography> */}
@@ -184,11 +192,11 @@ export default function App() {
         </Grid>
         <Grid size={3} display="flex" justifyContent='end'>
           <Stack direction='row' spacing={1} alignItems='center'>
-            {position.logo && <img src={new URL(position.logo, import.meta.url).href} width='24px' alt='' />}
-            {position.logos && position.logos.map((logo, index) => <img key={index} src={new URL(logo, import.meta.url).href} width='24px' alt='' />)}
             <Typography variant="subtitle2">
               {position.name}
             </Typography>
+            {position.logo && <img src={new URL(position.logo, import.meta.url).href} width='24px' alt='' />}
+            {/* {position.logos && position.logos.map((logo, index) => <img key={index} src={new URL(logo, import.meta.url).href} width='24px' alt='' />)} */}
           </Stack>
         </Grid>
       </Grid>
@@ -201,7 +209,12 @@ export default function App() {
       <Stack sx={{
         mt: .7, alignItems: 'center'
       }} direction='row' spacing={0.7}>
-        {position.skills?.map((skill, index) => <Chip sx={{ fontWeight: strongSkills.includes(skill) ? 'bold' : 'regular' }} key={index} color={'light_green' as any} size={strongSkills.includes(skill) ? "medium" : "small"} label={skill} />)}
+        {position.skills?.map((skill, index) =>
+          hasProperty(logos, skill) ? <Avatar alt={skill} sx={{ width: 18, height: 18 }} src={new URL((logos as any)[skill], import.meta.url).href} /> :
+            <Chip key={index} color={'light_green' as any} size="small"
+              // avatar={hasProperty(logos, skill) ? <Avatar alt={skill} src={new URL((logos as any)[skill], import.meta.url).href} /> : undefined}
+              // icon={hasProperty(logos, skill) ? <SvgI alt={skill} src={new URL("angular.png", import.meta.url).href} /> : undefined}
+              label={hasProperty(logos, skill) ? undefined : skill} />)}
       </Stack>
     </Stack>);
 
@@ -223,7 +236,42 @@ export default function App() {
     </Stack>)}
   </Stack>);
 
-  const _leisures = <Box sx={{ display: 'flex', justifyContent: 'center' }} >
+  const _skills = <Box sx={{
+    display: 'flex',
+    flexWrap: 'wrap', // Allows chips to wrap to the next line
+    gap: 1 // Adds some space between chips
+  }} >
+    {skills?.map((skill, index) => <Chip sx={{
+      fontWeight: strongSkills.includes(skill) ? 'bold' : 'regular',
+    }} key={index} color={'light_green' as any} size="small"
+      avatar={hasProperty(logos, skill) ? <Avatar alt={skill} src={new URL((logos as any)[skill], import.meta.url).href} /> : undefined}
+      label={skill} />)}
+
+    {/* size={strongSkills.includes(skill) ? "medium" : "small"} */}
+  </Box>;
+
+  const _languages = <Box sx={{ display: 'flex', justifyContent: 'center' }} >
+    {/* <Stack spacing={1}>
+      {languages.map((language, index) =>
+        language.name
+      )}
+    </Stack> */}
+    <Stack direction='column' spacing={1}>
+      {languages.map((language, index) =>
+        <Stack key={index}>
+          <Chip sx={{
+            fontWeight: 'bold',
+          }} color={'light_green' as any} size="medium"
+            label={language.name} />
+          <Typography variant="body2" align='center'>
+            {language.details}
+          </Typography>
+        </Stack>
+      )}
+    </Stack>
+  </Box>
+
+  const _leisures = <Box sx={{ display: 'flex', justifyContent: 'center' }}>
     <Stack direction='row' spacing={2.7} alignItems='center'>
       {leisures.map((leisure, index) =>
         <img key={index} src={new URL(leisure.icon, import.meta.url).href} width='28px' alt={leisure.name} />
@@ -231,11 +279,26 @@ export default function App() {
     </Stack>
   </Box>;
 
-  const _content = <Stack spacing={2.5}>
+  const _content = <Stack spacing={0.7}>
     {_header}
-    {_positions}
-    {_educations}
-    {_leisures}
+    <Grid container spacing={2}>
+      <Grid sx={{
+        mt: 4
+      }} size={{ xs: 4 }}>
+        <Stack spacing={4}>
+          {_skills}
+          {/* <Divider variant="middle" /> */}
+          {_languages}
+          {_leisures}
+        </Stack>
+      </Grid>
+      <Grid size={{ xs: 8 }}>
+        <Stack spacing={2}>
+          {_positions}
+          {_educations}
+        </Stack>
+      </Grid>
+    </Grid>
   </Stack>;
 
   return (
