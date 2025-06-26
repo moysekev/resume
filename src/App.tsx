@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid2'; // Grid version 2
+import Grid from '@mui/material/Grid';
 
 import { format, formatDuration, intervalToDuration } from "date-fns";
 
@@ -154,7 +154,7 @@ export default function App() {
   </Stack>);
 
   const _positions = positions.map((position, index) =>
-    <Stack key={index}>
+    <Stack key={index} spacing={0}>
       {/* <Stack direction='row' alignItems='center' justifyContent='space-between'>
         <Typography variant="h6">
           {position.title}
@@ -201,14 +201,14 @@ export default function App() {
         </Grid>
       </Grid>
       <Typography variant="body1" align='justify'>{position.summary}</Typography>
-      {index === 0 && position.details && <Stack sx={{ ml: 1 }}>
+      {index === 0 && position.details && <Stack>
         {position.details.map((detail, index) => <Typography key={index} variant="body2" align='justify'>
           {detail}
         </Typography>)}
       </Stack>}
       <Stack sx={{
-        mt: .7, alignItems: 'center'
-      }} direction='row' spacing={0.7}>
+        alignItems: 'center'
+      }} direction='row' spacing={0.3}>
         {position.skills?.map((skill, index) =>
           hasProperty(logos, skill) ? <Avatar alt={skill} sx={{ width: 18, height: 18 }} src={new URL((logos as any)[skill], import.meta.url).href} /> :
             <Chip key={index} color={'light_green' as any} size="small"
@@ -282,10 +282,14 @@ export default function App() {
   const _content = <Stack spacing={0.7}>
     {_header}
     <Grid container spacing={2}>
-      <Grid sx={{
-        mt: 4
-      }} size={{ xs: 4 }}>
-        <Stack spacing={4}>
+      <Grid sx={{ mt: 2 }}
+        size={{ xs: 4 }}>
+        <Stack direction="column" spacing={4}
+          sx={{
+            height: '100%',
+            justifyContent: "space-around",
+            alignItems: "center",
+          }}>
           {_skills}
           {/* <Divider variant="middle" /> */}
           {_languages}
@@ -295,6 +299,7 @@ export default function App() {
       <Grid size={{ xs: 8 }}>
         <Stack spacing={2}>
           {_positions}
+          <Divider variant="middle" />
           {_educations}
         </Stack>
       </Grid>
