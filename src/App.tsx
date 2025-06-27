@@ -2,17 +2,15 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from "@mui/icons-material/Phone";
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
 
 import { format, formatDuration, intervalToDuration } from "date-fns";
 
 import Avatar from "@mui/material/Avatar";
 import Chip from '@mui/material/Chip';
 import Divider from "@mui/material/Divider";
-import Paper from "@mui/material/Paper";
 import Stack from '@mui/material/Stack';
 
 import fr from "date-fns/locale/fr";
@@ -20,9 +18,9 @@ import fr from "date-fns/locale/fr";
 import resume from "./data/resume.json";
 
 /* remove margins when printing */
-import './App.css';
-import { blue, green } from "./theme";
 import { Container, useMediaQuery } from "@mui/material";
+import './App.css';
+import { green } from "./theme";
 
 const {
   firstName,
