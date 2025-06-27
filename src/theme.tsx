@@ -1,6 +1,5 @@
 import { createTheme } from '@mui/material/styles';
 // import { createTheme } from '@mui/material';
-import { red } from '@mui/material/colors';
 
 
 // https://mdigi.tools/lighten-color/#7a998a
@@ -38,12 +37,12 @@ let theme = createTheme({
         fontSize: 12,
       }
     },
-    // body2: {
-    //   fontSize: 14,
-    //   "@media print": {
-    //     fontSize: 13,
-    //   }
-    // },
+    body2: {
+      fontSize: 10,
+      "@media print": {
+        fontSize: 10,
+      }
+    },
     subtitle1: {
       fontSize: 14,
       "@media print": {

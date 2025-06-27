@@ -86,7 +86,7 @@ export default function App() {
   //   return lastPart
   // }
 
-  const _header = (<Stack sx={{ backgroundColor: green[200], p: 1.7 }}>
+  const _header = (<Stack sx={{ backgroundColor: green[200], p: 1.7 }} spacing={2}>
     <Stack direction='row' spacing={1}
       alignItems='center' justifyContent='space-between'>
       <Stack spacing={1}>
@@ -95,43 +95,43 @@ export default function App() {
         <Typography variant="subtitle1" sx={{ fontSize: { xs: '.8rem', sm: '1rem' } }}>
           {age}</Typography>
       </Stack>
-      <Avatar alt={`${firstName} ${lastName}`} src={new URL(picture, import.meta.url).href} sx={{ width: 96, height: 96 }} />
+      <Avatar alt={`${firstName} ${lastName}`} src={new URL('../assets/' + picture, import.meta.url).href} sx={{ width: 96, height: 96 }} />
       <Stack>
         {linkedIn && linkedIn !== '' &&
           <Link underline="hover" href={linkedIn}>
-            <Stack direction='row' alignItems='center'>
-              <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
-                <img src={new URL('linkedin.png', import.meta.url).href} width='24px' alt='' />
-              </ListItemIcon>
+            <Stack direction='row' alignItems='center' spacing={1}>
+              {/* <ListItemIcon sx={{ color: "unset" }}> */}
+              <img src={new URL('../assets/' + 'linkedin.png', import.meta.url).href} width='20px' alt='' />
+              {/* </ListItemIcon> */}
               <Typography variant="subtitle2" fontWeight={700} sx={{ fontSize: { xs: '.6rem', sm: '.8rem' } }} >
                 {linkedIn.substring(linkedIn.lastIndexOf('/') + 1)}
               </Typography>
             </Stack>
           </Link>}
         <Link underline="hover" href={`mailto:${email}`}>
-          <Stack direction='row' alignItems='center'>
-            <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
-              <EmailIcon fontSize="small" />
-            </ListItemIcon>
+          <Stack direction='row' alignItems='center' spacing={1}>
+            {/* <ListItemIcon sx={{color: "unset" }}> */}
+            <EmailIcon fontSize="small" />
+            {/* </ListItemIcon> */}
             <Typography variant="subtitle2" fontWeight={700} sx={{ fontSize: { xs: '.6rem', sm: '.8rem' } }}>
               {email}
             </Typography>
           </Stack>
         </Link>
         <Link underline="hover" href={`tel:${phone}`}>
-          <Stack direction='row' alignItems='center'>
-            <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
-              <PhoneIcon fontSize="small" />
-            </ListItemIcon>
+          <Stack direction='row' alignItems='center' spacing={1}>
+            {/* <ListItemIcon sx={{  color: "unset" }}> */}
+            <PhoneIcon fontSize="small" />
+            {/* </ListItemIcon> */}
             <Typography variant="subtitle2" fontWeight={700} sx={{ fontSize: { xs: '.6rem', md: '.8rem' } }}>
               {phone}
             </Typography>
           </Stack>
         </Link>
-        <Stack direction='row' alignItems='center'>
-          <ListItemIcon sx={{ minWidth: 32, color: "unset" }}>
-            <LocationOnIcon color="primary" fontSize="small" />
-          </ListItemIcon>
+        <Stack direction='row' alignItems='center' spacing={1}>
+          {/* <ListItemIcon sx={{ color: "unset" }}> */}
+          <LocationOnIcon color="primary" fontSize="small" />
+          {/* </ListItemIcon> */}
           <Stack>
             {address.map((line, index) => <Typography key={index}
               sx={{ fontSize: { xs: '.6rem', md: '.8rem' } }}
@@ -145,7 +145,7 @@ export default function App() {
       </Stack>
     </Stack>
     <Divider>
-      <Typography variant="overline" fontWeight={700} sx={{ fontSize: { xs: '.6rem', sm: '1rem' } }}>{title}</Typography>
+      <Typography variant="overline" fontWeight={700} sx={{ fontSize: { xs: '.7rem', sm: '1rem' } }}>{title}</Typography>
     </Divider>
     {summary.map((line, index) => <Typography key={index} variant="body1" align='justify'>
       {line}
@@ -168,7 +168,7 @@ export default function App() {
         } />
         <Typography variant="caption" color="primary" component="span">{position.domains?.join(', ')}</Typography>
         <Stack direction='row' spacing={1} alignItems='center'>
-          {position.logo && <img src={new URL(position.logo, import.meta.url).href} width='24px' alt='' />}
+          {position.logo && <img src={new URL('../assets/'+position.logo, import.meta.url).href} width='24px' alt='' />}
           <Typography variant="subtitle2">
             {position.name}
           </Typography>
@@ -196,28 +196,18 @@ export default function App() {
               <Typography color="primary" variant="subtitle2">
                 {position.name}
               </Typography>
-              {position.logo && <img src={new URL(position.logo, import.meta.url).href} width='24px' alt='' />}
-              {/* {position.logos && position.logos.map((logo, index) => <img key={index} src={new URL(logo, import.meta.url).href} width='24px' alt='' />)} */}
+              {position.logo && <img src={new URL('../assets/' + position.logo, import.meta.url).href} width='24px' alt='' />}
+              {/* {position.logos && position.logos.map((logo, index) => <img key={index} src={new URL('../assets/'+logo, import.meta.url).href} width='24px' alt='' />)} */}
             </Stack>
           </Stack>
         </Grid>
       </Grid>
       <Typography variant="body1" align='justify'>{position.summary}</Typography>
-      {index === 0 && position.details && <Stack>
-        {position.details.map((detail, index) => <Typography key={index} variant="body2" align='justify'>
+      {(index === 0 || index === 1) && position.details && <Stack component='ul'>
+        {position.details.map((detail, index) => <Typography key={index} variant="body2" align='justify' component='li'>
           {detail}
         </Typography>)}
       </Stack>}
-      {/* <Stack sx={{
-        alignItems: 'center'
-      }} direction='row' spacing={0.3}>
-        {position.skills?.map((skill, index) =>
-          hasProperty(logos, skill) ? <Avatar alt={skill} sx={{ width: 18, height: 18 }} src={new URL((logos as any)[skill], import.meta.url).href} /> :
-            <Chip key={index} color={'light_green' as any} size="small"
-              // avatar={hasProperty(logos, skill) ? <Avatar alt={skill} src={new URL((logos as any)[skill], import.meta.url).href} /> : undefined}
-              // icon={hasProperty(logos, skill) ? <SvgI alt={skill} src={new URL("angular.png", import.meta.url).href} /> : undefined}
-              label={hasProperty(logos, skill) ? undefined : skill} />)}
-      </Stack> */}
     </Stack>);
 
   const _educations = (<Stack>{educations.map((education, index) =>
@@ -238,17 +228,17 @@ export default function App() {
     </Stack>)}
   </Stack>);
 
-  const _skills = <Box sx={{
+  const _skills = (key: string) => <Box sx={{
     display: 'flex',
     flexWrap: 'wrap', // Allows chips to wrap to the next line
     gap: 1 // Adds some space between chips
   }} >
-    {skills?.map((skill, index) => <Chip sx={{
-      fontWeight: strongSkills.includes(skill) ? 'bold' : 'regular',
-    }} key={index} color={'light_green' as any} size="small"
-      avatar={hasProperty(logos, skill) ? <Avatar alt={skill} src={new URL((logos as any)[skill], import.meta.url).href} /> : undefined}
-      label={skill} />)}
-
+    {((skills as any)[key]).map((skill: string, index: number) =>
+      <Chip sx={{
+        fontWeight: strongSkills.includes(skill) ? 'bold' : 'regular',
+      }} key={index} color={'light_green' as any} size="small"
+        avatar={hasProperty(logos, skill) ? <Avatar alt={skill} src={new URL('../assets/' + (logos as any)[skill], import.meta.url).href} /> : undefined}
+        label={skill} />)}
     {/* size={strongSkills.includes(skill) ? "medium" : "small"} */}
   </Box>;
 
@@ -265,7 +255,7 @@ export default function App() {
             fontWeight: 'bold',
           }} color={'light_green' as any} size="medium"
             label={language.name} />
-          <Typography variant="body2" align='center'>
+          <Typography variant="body1" align='center'>
             {language.details}
           </Typography>
         </Stack>
@@ -276,17 +266,17 @@ export default function App() {
   const _leisures = <Box sx={{ display: 'flex', justifyContent: 'center' }}>
     <Stack direction='row' spacing={2.7} alignItems='center'>
       {leisures.map((leisure, index) =>
-        <img key={index} src={new URL(leisure.icon, import.meta.url).href} width='28px' alt={leisure.name} />
+        <img key={index} src={new URL('../assets/' + leisure.icon, import.meta.url).href} width='28px' alt={leisure.name} />
       )}
     </Stack>
   </Box>;
 
   const isMobile = useMediaQuery('(max-width:600px)');
 
-  const _content = <Stack spacing={0.7}>
+  const _content = <Stack sx={{ mt: { xs: 1, sm: 2 } }} spacing={2}>
     {_header}
     <Grid container spacing={2}>
-      <Grid sx={{ mt: 2 }}
+      <Grid sx={{ mt: { xs: 0, sm: 2 } }}
         size={{ xs: 12, sm: 4 }}>
         <Stack direction="column" spacing={4}
           sx={{
@@ -294,7 +284,13 @@ export default function App() {
             justifyContent: "space-around",
             alignItems: "center",
           }}>
-          {_skills}
+          <Stack spacing={2}>
+            {_skills("general")}
+            {_skills("frameworks")}
+            {_skills("languages")}
+            {_skills("systems")}
+            {_skills("others")}
+          </Stack>
           {/* <Divider variant="middle" /> */}
           {_languages}
           {!isMobile && _leisures}
@@ -306,6 +302,7 @@ export default function App() {
           <Divider variant="middle" />
           {_educations}
           {isMobile && _leisures}
+          {isMobile && <Divider variant="middle" />}
         </Stack>
       </Grid>
     </Grid>

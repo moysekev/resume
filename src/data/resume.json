@@ -29,49 +29,62 @@
     ],
     "email": "kevin_moyse@yahoo.fr",
     "phone": "0689666498",
-    "skills": [
-        "Angular",
-        "APIs",
-        "ApiGateways",
-        "AWS",
-        "Architecture",
-        "Domain-Driven",
-        "Event-Driven",
-        "Docker",
-        "FullStack",
-        "Git",
-        "GitHub/lab CI/CD",
-        "Golang",
-        "GoogleCloud",
-        "IAM",
-        "Java",
-        "Javascript",
-        "Jenkins",
-        "Jira, Confluence",
-        "jQuery",
-        "Kafka",
-        "Keycloak",
-        "Linux",
-        "MaterialUI",
-        "Meteor",
-        "Microservices",
-        "MongoDB",
-        "MySQL",
-        "NextJS",
-        "NodeJS",
-        "Nginx",
-        "OAuth2",
-        "Oracle",
-        "GoogleCloud",
-        "Prometheus",
-        "Python",
-        "REST",
-        "React",
-        "SonarQube",
-        "Typescript",
-        "Ubuntu",
-        "WebRTC"
-    ],
+    "skills": {
+        "general": [
+            "Domain-Driven",
+            "Architecture",
+            "APIs",
+            "FullStack",
+            "Event-Driven",
+            "Microservices",
+            "Concurrent Programming",
+            "High Availability",
+            "Performances"
+        ],
+        "frameworks": [
+            "Angular",
+            "React",
+            "MaterialUI",
+            "NextJS",
+            "Meteor",
+            "NodeJS"
+        ],
+        "languages": [
+            "Javascript",
+            "Typescript",
+            "Golang",
+            "Java",
+            "Python"
+        ],
+        "systems": [
+            "AWS",
+            "S3",
+            "GoogleCloud",
+            "Linux",
+            "Ubuntu",
+            "Docker"
+        ],
+        "others": [
+            "ApiGateways",
+            "REST",
+            "Git",
+            "GitHub/lab CI/CD",
+            "Jenkins",
+            "Jira, Confluence",
+            "Kafka",
+            "Spark",
+            "MongoDB",
+            "Oracle",
+            "MySQL",
+            "Nginx",
+            "OAuth2",
+            "IAM",
+            "Keycloak",
+            "Prometheus",
+            "SonarQube",
+            "WebRTC"
+        ]
+    },
     "logos": {
         "Angular": "angular.png",
         "AWS": "aws.png",
@@ -96,11 +109,10 @@
     "strongSkills": [
         "Angular",
         "Architecture",
+        "FullStack",
         "Golang",
         "Java",
-        "Java Spring",
-        "Java EE",
-        "Python",
+        "MongoDB",
         "React",
         "Typescript"
     ],
@@ -121,8 +133,7 @@
             "startDate": "3/15/2021",
             "summary_": "Direction Technique, Architecture produit.",
             "summary": "Direction de la refonte de l'architecture et du développement full-stack d'un produit SaaS de visio-assistance.",
-            "details_": [
-                "Refonte d'architecture et de l'ensemble des développements FullStack de produits SaaS de Visio-assistance.",
+            "details": [
                 "Développement d'une couche d'abstraction entre plateforme et technologie logicielle produit.",
                 "Conception de la stratégie d'intégration dans des solutions tierces tels que Salesforce, Zendesk, ServiceNow, Talkdesk.",
                 "Définition de la stack logicielle, choix des outils et technologies. Direction des développements."
@@ -161,10 +172,9 @@
             "endDate": "3/31/2021",
             "summary": "Conception d'une solution SaaS de partage de données et d'un système BigData avec calculs distribués.",
             "details": [
-                "Responsable de la Factory logicielle complète éditeur, et satisfaction client",
-                "Conception, développement, et direction d’équipe d’une solution BigData et calculs massivement distribués.",
-                "Automatisation de processus métier longs et très lourds en terme de calculs : Conception complète, direction d’équipe, et développement des couches socle frontend et backend.",
-                "Conception et réalisation complète d’une solution réglementaire en mode SaaS de partage de logiciels et d’information, distribution des calculs. (interface web, base nosql...)"
+                "Responsable de la factory logicielle complète éditeur, et satisfaction client.",
+                "Conception et réalisation d’une solution réglementaire en mode SaaS de partage de logiciels et d’information, distribution des calculs, automatisation de processus métier longs.",
+                "Direction d’équipe, et développement des couches socle frontend et backend."
             ],
             "domains": [
                 "Actuariat"
