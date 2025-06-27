@@ -18,7 +18,8 @@
     ],
     "summary": [
         "Actuellement Architecte Produits et Directeur Technique chez Apizee, j'ai plus de 20 ans d'expérience dans les secteurs des télécommunications, de la banque et de l'assurance.",
-        "Passionné d'innovation, je m'adapte facilement aux nouvelles technologies. J'ai participé à des projets internationaux qui ont renforcé mon intérêt pour le développement de solutions de qualité, intégrant sécurité et performance dès la conception.",
+        "J'ai participé à des projets internationaux qui ont renforcé mon intérêt pour le développement de solutions de qualité, intégrant sécurité et performance dès la conception.",
+        "Passionné d'innovation, je m'adapte facilement aux nouvelles technologies.",
         "Je mets à profit mes compétences techniques et humaines pour piloter les projets informatiques ambitieux au sein de votre entreprise."
     ],
     "summary_en": [
@@ -123,7 +124,8 @@
     "positions": [
         {
             "title": "Directeur Technique",
-            "name": "BouyguesTel Apizee, Lannion",
+            "name": "BouyguesTel Apizee",
+            "location": "Lannion",
             "logo": "bt.png",
             "logos_COMMENTED-OUT": [
                 "bt.png",
@@ -164,8 +166,9 @@
             ]
         },
         {
-            "title": "Directeur informatique",
-            "name": "Fractales, Paris",
+            "title": "Directeur Informatique",
+            "name": "Fractales",
+            "location": "Paris",
             "logo": "fractales.webp",
             "startDate": "3/15/2016",
             "endDate_a_bit_changed": "(3/1/2021) to make it exactly 5 years instead of 4 years 11 months",
@@ -196,7 +199,8 @@
         },
         {
             "title": "Global Architect",
-            "name": "Tibco Software, Paris",
+            "name": "Tibco Software",
+            "location": "Paris",
             "logo": "tibco.png",
             "startDate": "2010",
             "endDate": "3/15/2016",
@@ -223,7 +227,8 @@
         },
         {
             "title": "Software Architect",
-            "name": "Kabira Technologies, San Mateo CA",
+            "name": "Kabira Technologies",
+            "location": "San Mateo CA",
             "logo": "kabira.png",
             "startDate": "3/1/2003",
             "endDate": "2010",
@@ -253,7 +258,8 @@
         },
         {
             "title": "Ingénieur Logiciel R&D",
-            "name": "Orange, Lannion",
+            "name": "Orange",
+            "location": "Lannion",
             "logo": "orange.png",
             "startDate": "9/1/2000",
             "endDate": "3/1/2003",

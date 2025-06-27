@@ -147,9 +147,11 @@ export default function App() {
     <Divider>
       <Typography variant="overline" fontWeight={700} sx={{ fontSize: { xs: '.7rem', sm: '1rem' } }}>{title}</Typography>
     </Divider>
+    <Stack spacing={.7}>
     {summary.map((line, index) => <Typography key={index} variant="body1" align='justify'>
       {line}
     </Typography>)}
+    </Stack>
     {/* <Typography variant="body1" align='justify'>
       {summary}
     </Typography> */}
@@ -174,10 +176,10 @@ export default function App() {
           </Typography>
         </Stack>
       </Stack> */}
-      <Grid container spacing={{ xs: .2, sm: 2 }}>
+      <Grid container spacing={{ xs: .2, sm: 1 }} alignItems='center'>
         <Grid size={{ xs: 12, sm: 6 }}>
           <Stack direction='row' spacing={2} alignItems='center' justifyContent="space-between">
-            <Typography variant="h6">
+            <Typography variant="h6" sx={{ whiteSpace: 'nowrap' }}>
               {position.title}
             </Typography>
             <Chip variant="outlined" color='primary' size="small" label={
@@ -191,11 +193,16 @@ export default function App() {
         </Grid>
         <Grid size={{ xs: 12, sm: 6 }}>
           <Stack direction='row' spacing={2} alignItems='center' justifyContent="space-between">
-            <Typography variant="caption" color="primary" component="span">{position.domains?.join(', ')}</Typography>
+            <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>{position.domains?.join(', ')}</Typography>
             <Stack direction='row' spacing={1} alignItems='center'>
-              <Typography color="primary" variant="subtitle2">
-                {position.name}
-              </Typography>
+              <Stack>
+                <Typography color="primary" variant="subtitle2" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' }, whiteSpace: 'nowrap' }}>
+                  {position.name}
+                </Typography>
+                <Typography color="primary" variant="subtitle2" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' }, whiteSpace: 'nowrap' }}>
+                  {position.location}
+                </Typography>
+              </Stack>
               {position.logo && <img src={new URL('../assets/' + position.logo, import.meta.url).href} width='24px' alt='' />}
               {/* {position.logos && position.logos.map((logo, index) => <img key={index} src={new URL('../assets/'+logo, import.meta.url).href} width='24px' alt='' />)} */}
             </Stack>
@@ -208,7 +215,7 @@ export default function App() {
           {detail}
         </Typography>)}
       </Stack>}
-    </Stack>);
+    </Stack >);
 
   const _educations = (<Stack>{educations.map((education, index) =>
     <Stack key={index} direction='row' spacing={1} alignItems='center'>
@@ -231,7 +238,7 @@ export default function App() {
   const _skills = (key: string) => <Box sx={{
     display: 'flex',
     flexWrap: 'wrap', // Allows chips to wrap to the next line
-    gap: 1 // Adds some space between chips
+    gap: .7 // Adds some space between chips
   }} >
     {((skills as any)[key]).map((skill: string, index: number) =>
       <Chip sx={{
@@ -273,7 +280,7 @@ export default function App() {
 
   const isMobile = useMediaQuery('(max-width:600px)');
 
-  const _content = <Stack sx={{ mt: { xs: 1, sm: 2 } }} spacing={2}>
+  const _content = <Stack sx={{ mt: { xs: 1, sm: 2 }, mb: { xs: 1, sm: 2 } }} spacing={2}>
     {_header}
     <Grid container spacing={2}>
       <Grid sx={{ mt: { xs: 0, sm: 2 } }}
@@ -302,7 +309,6 @@ export default function App() {
           <Divider variant="middle" />
           {_educations}
           {isMobile && _leisures}
-          {isMobile && <Divider variant="middle" />}
         </Stack>
       </Grid>
     </Grid>
