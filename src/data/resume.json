@@ -2,7 +2,7 @@
     "firstName": "Kevin",
     "lastName": "Moyse",
     "age": "46 ans",
-    "title_": "Architecte Logiciel FullStack",
+    "title_": "Architecte Logiciel Fullstack",
     "title": "Directeur Technique - Architecte Logiciel",
     "picture": "kevin-moyse_96x96.png",
     "address": [
@@ -35,7 +35,7 @@
             "Domain-Driven",
             "Architecture",
             "APIs",
-            "FullStack",
+            "Fullstack",
             "Event-Driven",
             "Microservices",
             "Concurrent Programming",
@@ -51,11 +51,11 @@
             "NodeJS"
         ],
         "languages": [
-            "Javascript",
-            "Typescript",
             "Golang",
             "Java",
-            "Python"
+            "Python",
+            "Javascript",
+            "Typescript"
         ],
         "systems": [
             "AWS",
@@ -88,8 +88,10 @@
     },
     "logos": {
         "Angular": "angular.png",
+        "Architecture": "architecture.png",
         "AWS": "aws.png",
         "Docker": "docker-mark-blue.svg",
+        "Fullstack": "fullstack.svg",
         "Git": "git.png",
         "Golang": "Go-Logo_Blue.svg",
         "GoogleCloud": "google-cloud.png",
@@ -110,7 +112,7 @@
     "strongSkills": [
         "Angular",
         "Architecture",
-        "FullStack",
+        "Fullstack",
         "Golang",
         "Java",
         "MongoDB",
@@ -151,7 +153,7 @@
             ],
             "skills": [
                 "Architecture",
-                "FullStack",
+                "Fullstack",
                 "APIs",
                 "WebRTC",
                 "Golang",

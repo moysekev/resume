@@ -225,7 +225,7 @@ export default function App() {
           <Typography variant="subtitle1" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>
             {education.name}
           </Typography>
-          <Typography variant="subtitle2" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>
+          <Typography color="primary"  variant="subtitle2" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>
             {education.location}
           </Typography>
         </Stack>
@@ -283,10 +283,10 @@ export default function App() {
     <Grid container spacing={2}>
       <Grid sx={{ mt: { xs: 0, sm: 2 } }}
         size={{ xs: 12, sm: 4 }}>
-        <Stack direction="column" spacing={4}
+        <Stack direction="column" spacing={4} justifyContent="space-evenly"
           sx={{
             height: '100%',
-            justifyContent: "space-around",
+            
             alignItems: "center",
           }}>
           <Stack spacing={2}>
