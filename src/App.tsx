@@ -18,7 +18,7 @@ import fr from "date-fns/locale/fr";
 import resume from "./data/resume.json";
 
 /* remove margins when printing */
-import { Container, useMediaQuery } from "@mui/material";
+import { Container, Paper, useMediaQuery } from "@mui/material";
 import './App.css';
 import { green } from "./theme";
 
@@ -71,6 +71,7 @@ const hasProperty = (obj: any, prop: string): boolean => {
 export default function App() {
 
   const printable = true;
+  const anonymous = false;
 
   // const linkedInId = () => {
   //   var lastPart = '';
@@ -85,7 +86,46 @@ export default function App() {
   // }
 
   const _header = (<Stack sx={{ backgroundColor: green[200], p: 1.7 }} spacing={2}>
-    <Stack direction='row' spacing={1}
+    {anonymous ? <Stack direction='row' spacing={1}
+      alignItems='center' justifyContent='space-between'>
+      <Stack spacing={1}>
+        <Typography variant="h3" fontWeight={700} sx={{ fontSize: { xs: '1.5rem', sm: '2rem' } }}>
+          -anonymisé-</Typography>
+        <Typography variant="subtitle1" sx={{ fontSize: { xs: '.8rem', sm: '1rem' } }}>
+          -anonymisé-</Typography>
+      </Stack>
+      <Avatar alt={`-anonymisé-`} src="" />
+      <Stack>
+        <Link underline="hover" href={`mailto:${email}`}>
+          <Stack direction='row' alignItems='center' spacing={1}>
+            <EmailIcon fontSize="small" />
+            <Typography variant="subtitle2" fontWeight={700} sx={{ fontSize: { xs: '.6rem', sm: '.8rem' } }}>
+              -anonymisé-
+            </Typography>
+          </Stack>
+        </Link>
+        <Link underline="hover" href={`tel:${phone}`}>
+          <Stack direction='row' alignItems='center' spacing={1}>
+            <PhoneIcon fontSize="small" />
+            <Typography variant="subtitle2" fontWeight={700} sx={{ fontSize: { xs: '.6rem', md: '.8rem' } }}>
+              -anonymisé-
+            </Typography>
+          </Stack>
+        </Link>
+        <Stack direction='row' alignItems='center' spacing={1}>
+          <LocationOnIcon color="primary" fontSize="small" />
+          <Stack>
+            <Typography
+              sx={{ fontSize: { xs: '.6rem', md: '.8rem' } }}
+              color="primary"
+              variant="subtitle2"
+              component="div">
+              -anonymisé-
+            </Typography>
+          </Stack>
+        </Stack>
+      </Stack>
+    </Stack> : <Stack direction='row' spacing={1}
       alignItems='center' justifyContent='space-between'>
       <Stack spacing={1}>
         <Typography variant="h3" fontWeight={700} sx={{ fontSize: { xs: '1.5rem', sm: '2rem' } }}>
@@ -141,14 +181,14 @@ export default function App() {
           </Stack>
         </Stack>
       </Stack>
-    </Stack>
+    </Stack>}
     <Divider>
       <Typography variant="overline" fontWeight={700} sx={{ fontSize: { xs: '.7rem', sm: '1rem' } }}>{title}</Typography>
     </Divider>
     <Stack spacing={.7}>
-    {summary.map((line, index) => <Typography key={index} variant="body1" align='justify'>
-      {line}
-    </Typography>)}
+      {summary.map((line, index) => <Typography key={index} variant="body1" align='justify'>
+        {line}
+      </Typography>)}
     </Stack>
     {/* <Typography variant="body1" align='justify'>
       {summary}
@@ -192,7 +232,19 @@ export default function App() {
         <Grid size={{ xs: 12, sm: 6 }}>
           <Stack direction='row' spacing={2} alignItems='center' justifyContent="space-between">
             <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>{position.domains?.join(', ')}</Typography>
-            <Stack direction='row' spacing={1} alignItems='center'>
+            {index === 0 && anonymous ? <Stack direction='row' spacing={1} alignItems='center'>
+              <Stack>
+                <Typography color="primary" variant="subtitle2" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' }, whiteSpace: 'nowrap' }}>
+                  -anonymisé-
+                </Typography>
+                <Typography color="primary" variant="subtitle2" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' }, whiteSpace: 'nowrap' }}>
+                  -anonymisé-
+                </Typography>
+              </Stack>
+              <Typography color="primary" variant="subtitle2" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' }, whiteSpace: 'nowrap' }}>
+                -anonymisé-
+              </Typography>
+            </Stack> : <Stack direction='row' spacing={1} alignItems='center'>
               <Stack>
                 <Typography color="primary" variant="subtitle2" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' }, whiteSpace: 'nowrap' }}>
                   {position.name}
@@ -203,7 +255,7 @@ export default function App() {
               </Stack>
               {position.logo && <img src={new URL('../assets/' + position.logo, import.meta.url).href} width='24px' alt='' />}
               {/* {position.logos && position.logos.map((logo, index) => <img key={index} src={new URL('../assets/'+logo, import.meta.url).href} width='24px' alt='' />)} */}
-            </Stack>
+            </Stack>}
           </Stack>
         </Grid>
       </Grid>
@@ -225,7 +277,7 @@ export default function App() {
           <Typography variant="subtitle1" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>
             {education.name}
           </Typography>
-          <Typography color="primary"  variant="subtitle2" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>
+          <Typography color="primary" variant="subtitle2" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>
             {education.location}
           </Typography>
         </Stack>
@@ -286,7 +338,6 @@ export default function App() {
         <Stack direction="column" spacing={4} justifyContent="space-evenly"
           sx={{
             height: '100%',
-            
             alignItems: "center",
           }}>
           <Stack spacing={2}>
