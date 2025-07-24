@@ -1,13 +1,15 @@
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from "@mui/icons-material/Phone";
+import ThumbUpTwoToneIcon from '@mui/icons-material/ThumbUpTwoTone';
+import TrendingUpTwoToneIcon from '@mui/icons-material/TrendingUpTwoTone';
+
+import { format, formatDuration, intervalToDuration } from "date-fns";
+
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
-
-import { format, formatDuration, intervalToDuration } from "date-fns";
-
 import Avatar from "@mui/material/Avatar";
 import Chip from '@mui/material/Chip';
 import Divider from "@mui/material/Divider";
@@ -24,7 +26,7 @@ import { Container, Paper, useMediaQuery } from "@mui/material";
 import './App.css';
 import { green } from "./theme";
 
-const english = true;
+const english = false;
 
 const {
   firstName,
@@ -228,7 +230,7 @@ export default function App() {
       </Stack> */}
       <Grid container spacing={{ xs: .2, sm: 2 }} alignItems='center'>
         <Grid size={{ xs: 12, sm: 6 }}>
-          <Stack direction='row' spacing={2} alignItems='center' justifyContent="space-between">
+          <Stack direction='row' spacing={1} alignItems='center' justifyContent="space-between">
             <Typography variant="h6" sx={{ whiteSpace: 'nowrap' }}>
               {position.title}
             </Typography>
@@ -272,11 +274,22 @@ export default function App() {
         </Grid>
       </Grid>
       <Typography variant="body1" align='justify'>{position.summary}</Typography>
-      {(index === 0 || index === 1) && position.details && <Stack component='ul'>
+      {(index === 0 || index === 1) && position.details && <Stack sx={{ m: 1 }}>
+        {/* component='ul' */}
         {position.details.map((detail, index) => <Typography key={index} variant="body2" align='justify' component='li'>
           {detail}
         </Typography>)}
       </Stack>}
+      {position.achievements &&
+        <Stack direction='row' spacing={2} alignItems='center' sx={{ mt: 1 }}>
+          <TrendingUpTwoToneIcon fontSize="small" />
+          <Stack>
+            {/* component='ul' */}
+            {position.achievements.map((detail, index) => <Typography key={index} variant="body2" align='justify' component='span'>
+              {detail}
+            </Typography>)}
+          </Stack>
+        </Stack>}
     </Stack >);
 
   const _educations = (<Stack>{educations.map((education, index) =>
@@ -376,8 +389,14 @@ export default function App() {
       </Grid>
       <Grid size={{ xs: 12, sm: 8 }}>
         <Stack spacing={2}>
+          <Divider variant="middle">
+            <Typography variant="overline" fontSize=".7rem">{english ? 'Experience' : 'Expérience professionnelle'}</Typography>
+          </Divider>
           {_positions}
-          <Divider variant="middle" />
+          {/* <Divider variant="middle" /> */}
+          <Divider variant="middle">
+            <Typography variant="overline" fontSize=".7rem">{english ? 'Training and Education' : 'Formation'}</Typography>
+          </Divider>
           {_educations}
           {isMobile && _leisures}
         </Stack>

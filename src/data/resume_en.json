@@ -124,7 +124,7 @@
     "positions": [
         {
             "title": "Technical Director",
-            "name": "BouyguesTel Apizee",
+            "name": "Bouygues Telecom",
             "location": "Lannion, France",
             "logo": "bt.png",
             "logos_COMMENTED-OUT": [
@@ -133,11 +133,11 @@
             ],
             "website": "https://www.apizee.com/",
             "startDate": "3/15/2021",
-            "summary": "Direction de la refonte de l'architecture et du développement full-stack d'un produit SaaS de visio-assistance.",
+            "summary": "Management of the redesign of the architecture and full-stack development of a SaaS video-assistance product.",
             "details": [
-                "Développement d'une couche d'abstraction entre plateforme et technologie logicielle produit.",
-                "Conception de la stratégie d'intégration dans des solutions tierces tels que Salesforce, Zendesk, ServiceNow, Talkdesk.",
-                "Définition de la stack logicielle, choix des outils et technologies. Direction des développements."
+                "Development of an abstraction layer between the platform and the product's software technology.",
+                "Design of the integration strategy with third-party solutions such as Salesforce, Zendesk, ServiceNow, and Talkdesk.",
+                "Definition of the software stack, selection of tools and technologies, and leadership of development teams"
             ],
             "domains": [
                 "Video Conferencing"
@@ -159,21 +159,25 @@
             ]
         },
         {
-            "title": "Directeur Informatique",
+            "title": "Chief Information Officer",
             "name": "Fractales",
             "location": "Paris",
             "logo": "fractales.webp",
             "startDate": "3/15/2016",
             "endDate_a_bit_changed": "(3/1/2021) to make it exactly 5 years instead of 4 years 11 months",
             "endDate": "3/31/2021",
-            "summary": "Conception d'une solution SaaS de partage de données et d'un système BigData avec calculs distribués.",
+            "summary": "Design and implementation of a regulatory SaaS solution for software and information sharing, distribution of computations, and automation of lengthy business processes.",
             "details": [
-                "Responsable de la factory logicielle complète éditeur, et satisfaction client.",
-                "Conception et réalisation d’une solution réglementaire en mode SaaS de partage de logiciels et d’information, distribution des calculs, automatisation de processus métier longs.",
-                "Direction d’équipe, et développement des couches socle frontend et backend."
+                "Head of the complete software factory for the publisher, ensuring client satisfaction.",
+                "Team management and development of the core frontend and backend layers."
+            ],
+            "achievements": [
+                "Contributed to revenue growth, doubling it to reach €2 million within one year.",
+                "Ensured the satisfaction of our key customer, Covea, by providing reliable and daily service for the production of all their regulatory reports.",
+                "Operation of computing farms with several hundred CPUs."
             ],
             "domains": [
-                "Actuariat"
+                "Actuarial"
             ],
             "skills": [
                 "Architecture",
@@ -197,7 +201,7 @@
             "logo": "tibco.png",
             "startDate": "2010",
             "endDate": "3/15/2016",
-            "summary": "Leader technique. Rédaction de spécifications. Développement d'applications hautes performances.",
+            "summary": "Technical Lead. Specification writing. Development of high-performance applications.",
             "details": [
                 "Définition d'architecture globale d'applications au sein de SI dans les domaines Télécom et bancaires.",
                 "Ecriture de spécifications détaillées, développement, missions d'expertises. Création de processeurs de paiement (gestion transactionelle des balances), de connecteurs d'applications.",
@@ -205,8 +209,8 @@
                 "Télécom : 3UK, Orange, SFR, Bouygues, SwissCom, BSkyB"
             ],
             "domains": [
-                "Télécom",
-                "Bancaire"
+                "Telecom",
+                "Banking"
             ],
             "skills": [
                 "Java",
@@ -225,7 +229,7 @@
             "logo": "kabira.png",
             "startDate": "3/1/2003",
             "endDate": "2010",
-            "summary": "Conception et développement de projets, produits et solutions. Conseil auprès de clients et intégrateurs.",
+            "summary": "Design and development of projects, products, and solutions. Consulting for clients and integrators.",
             "details": [
                 "Compréhension des besoins clients, afin de créer et/ou d'améliorer des produits.",
                 "Invention et réalisation du Produit KBM (Business Modeling) afin de développer une solution de 'mobilepayment' en Model Driven Development (génération automatique du code à partir de diagrammes UML) basée sur la plateforme multithread KTP",
@@ -235,7 +239,7 @@
                 "Conception et réalisation de plusieurs produits"
             ],
             "domains": [
-                "Télécom",
+                "Banking",
                 "Provisioning"
             ],
             "skills": [
@@ -250,19 +254,19 @@
             ]
         },
         {
-            "title": "Ingénieur Logiciel R&D",
+            "title": "R&D Software Engineer",
             "name": "Orange",
             "location": "Lannion",
             "logo": "orange.png",
             "startDate": "9/1/2000",
             "endDate": "3/1/2003",
-            "summary": "Développeur d'une solution Rapid-Application-Development : de la modélisation à la compilation.",
+            "summary": "Developer of a Rapid Application Development solution: from modeling to compilation.",
             "details": [
                 "Projet AdONIS (Advanced OSS for New IP Services, VoIp, Vpn...), suite du sujet du tutorat.",
                 "Conception(UML) et réalisation d’une plateforme de gestion réseaux IP. Développement Bdd&IHM"
             ],
             "domains": [
-                "Télécom",
+                "Banking",
                 "VoIp/Vpn"
             ],
             "skills": [
@@ -277,12 +281,12 @@
     ],
     "educations": [
         {
-            "name": "Communication : Travailler ensemble en confiance",
+            "name": "Communication: Working Together in Trust",
             "location": "B-Flower",
             "dateText": "2023"
         },
         {
-            "name": "Les fondamentaux des instruments financiers",
+            "name": "The fundamentals of financial instruments",
             "location": "EFE - Paris",
             "dateText": "2016"
         },
@@ -292,13 +296,13 @@
             "dateText": "2012"
         },
         {
-            "name": "Diplôme d'Ingénieur Informatique",
+            "name": "Master's Degree in Computer Engineering",
             "location": "ENSSAT - Lannion",
             "dateText": "2001"
         },
         {
             "_display": true,
-            "name": "DUT Informatique option Systèmes Industriels",
+            "name": "Diploma in Computer Science, Industrial Systems",
             "location": "IUT - Clermont-Ferrand",
             "dateText": "1998"
         },

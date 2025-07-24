@@ -204,11 +204,15 @@
             "startDate": "3/15/2016",
             "endDate_a_bit_changed": "(3/1/2021) to make it exactly 5 years instead of 4 years 11 months",
             "endDate": "3/31/2021",
-            "summary": "Conception d'une solution SaaS de partage de données et d'un système BigData avec calculs distribués.",
+            "summary": "Conception et réalisation d’une solution réglementaire en mode SaaS de partage de logiciels et d’information, distribution des calculs, automatisation de processus métier longs.",
             "details": [
                 "Responsable de la factory logicielle complète éditeur, et satisfaction client.",
-                "Conception et réalisation d’une solution réglementaire en mode SaaS de partage de logiciels et d’information, distribution des calculs, automatisation de processus métier longs.",
                 "Direction d’équipe, et développement des couches socle frontend et backend."
+            ],
+            "achievements": [
+                "Contribution à la croissance du chiffre d'affaires, doublé pour atteindre 2 millions d'euros en un an.",
+                "Assuré la satisfaction de notre principal client, Covea, en garantissant un service fiable et quotidien pour la production de l'ensemble de leurs rapports réglementaires.",
+                "Exploitation de fermes de calculs de plusieurs centaines de CPU."
             ],
             "domains": [
                 "Actuariat"
