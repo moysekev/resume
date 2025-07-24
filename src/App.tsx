@@ -13,14 +13,18 @@ import Chip from '@mui/material/Chip';
 import Divider from "@mui/material/Divider";
 import Stack from '@mui/material/Stack';
 
+import en from "date-fns/locale/en-GB";
 import fr from "date-fns/locale/fr";
 
 import resume from "./data/resume.json";
+import resume_en from "./data/resume_en.json";
 
 /* remove margins when printing */
 import { Container, Paper, useMediaQuery } from "@mui/material";
 import './App.css';
 import { green } from "./theme";
+
+const english = true;
 
 const {
   firstName,
@@ -41,7 +45,7 @@ const {
   educations,
   languages,
   leisures
-} = resume;
+} = english ? resume_en : resume;
 
 
 const formatDateText = (startDate: string, endDate?: string) => {
@@ -58,7 +62,7 @@ const formatDateText = (startDate: string, endDate?: string) => {
         start: Date.parse(startDate),
         end: endDate ? Date.parse(endDate) : new Date(),
       }),
-      { format: ["years", "months"], locale: fr },
+      { format: ["years", "months"], locale: english ? en : fr },
     )
     // +")"
   );
@@ -85,7 +89,7 @@ export default function App() {
   //   return lastPart
   // }
 
-  const _header = (<Stack sx={{ backgroundColor: green[200], p: 1.7 }} spacing={2}>
+  const _header = (<Stack sx={{ backgroundColor: green[200], p: 1.7 }} spacing={1}>
     {anonymous ? <Stack direction='row' spacing={1}
       alignItems='center' justifyContent='space-between'>
       <Stack spacing={1}>
@@ -130,8 +134,8 @@ export default function App() {
       <Stack spacing={1}>
         <Typography variant="h3" fontWeight={700} sx={{ fontSize: { xs: '1.5rem', sm: '2rem' } }}>
           {firstName} {lastName}</Typography>
-        <Typography variant="subtitle1" sx={{ fontSize: { xs: '.8rem', sm: '1rem' } }}>
-          {age}</Typography>
+        {age !== 0 && <Typography variant="subtitle1" sx={{ fontSize: { xs: '.8rem', sm: '1rem' } }}>
+          {age} ans</Typography>}
       </Stack>
       <Avatar alt={`${firstName} ${lastName}`} src={new URL('../assets/' + picture, import.meta.url).href} sx={{ width: 96, height: 96 }} />
       <Stack>
@@ -185,11 +189,19 @@ export default function App() {
     <Divider>
       <Typography variant="overline" fontWeight={700} sx={{ fontSize: { xs: '.7rem', sm: '1rem' } }}>{title}</Typography>
     </Divider>
-    <Stack spacing={.7}>
-      {summary.map((line, index) => <Typography key={index} variant="body1" align='justify'>
+    {/* <Stack spacing={.7} component='ul'>
+      {summary.map((line, index) => <Typography key={index} variant="body1" align='justify' component='li'>
         {line}
       </Typography>)}
-    </Stack>
+    </Stack> */}
+    <Grid container rowSpacing={1} columnSpacing={2} sx={{
+      justifyContent: "center",
+      alignItems: "center",
+    }} columns={{ xs: 12, sm: 6 }}>
+      {summary.map((line, index) => <Grid><Typography key={index} variant="body1" align='justify'>
+        {line}
+      </Typography></Grid>)}
+    </Grid>
     {/* <Typography variant="body1" align='justify'>
       {summary}
     </Typography> */}
@@ -199,7 +211,7 @@ export default function App() {
     <Stack key={index} spacing={0}>
       {/* <Stack direction='row' alignItems='center' justifyContent='space-between'>
         <Typography variant="h6">
-          {position.title}
+          {position.title}2
         </Typography>
         <Chip variant="outlined" color='primary' size="small" label={
           index === 0 ?
@@ -214,7 +226,7 @@ export default function App() {
           </Typography>
         </Stack>
       </Stack> */}
-      <Grid container spacing={{ xs: .2, sm: 1 }} alignItems='center'>
+      <Grid container spacing={{ xs: .2, sm: 2 }} alignItems='center'>
         <Grid size={{ xs: 12, sm: 6 }}>
           <Stack direction='row' spacing={2} alignItems='center' justifyContent="space-between">
             <Typography variant="h6" sx={{ whiteSpace: 'nowrap' }}>
@@ -222,7 +234,7 @@ export default function App() {
             </Typography>
             <Chip variant="outlined" color='primary' size="small" label={
               index === 0 ?
-                '🗓️ ' + format(Date.parse(position.startDate), "MMMM yyyy", { locale: fr })
+                '🗓️ ' + format(Date.parse(position.startDate), "MMMM yyyy", { locale: english ? en : fr })
                 // commented out, otherwise the resume must be updated every month but this is not possible when printed ;)
                 // + ', ' + formatDateText(position.startDate, position.endDate)
                 : formatDateText(position.startDate, position.endDate)
@@ -268,6 +280,7 @@ export default function App() {
     </Stack >);
 
   const _educations = (<Stack>{educations.map((education, index) =>
+    (education._display || education._display === undefined) &&
     <Stack key={index} direction='row' spacing={1} alignItems='center'>
       <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>
         {education.dateText}
@@ -333,18 +346,27 @@ export default function App() {
   const _content = <Stack sx={{ mt: { xs: 1, sm: 2 }, mb: { xs: 1, sm: 2 } }} spacing={2}>
     {_header}
     <Grid container spacing={2}>
-      <Grid sx={{ mt: { xs: 0, sm: 2 } }}
+      <Grid sx={{ mt: { xs: 0, sm: 0 } }}
         size={{ xs: 12, sm: 4 }}>
         <Stack direction="column" spacing={4} justifyContent="space-evenly"
           sx={{
             height: '100%',
             alignItems: "center",
           }}>
-          <Stack spacing={2}>
-            {_skills("general")}
+          <Stack spacing={1}>
+            <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>Architecture</Typography>
+            {_skills("architecture")}
+            <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>{english ? 'Soft skills' : 'Savoir-être'}</Typography>
+            {_skills("softskills")}
+            <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>Frameworks</Typography>
             {_skills("frameworks")}
+            <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>{english ? 'Languages' : 'Langages'}</Typography>
             {_skills("languages")}
+            <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>{english ? 'Systems' : 'Systèmes'}</Typography>
             {_skills("systems")}
+            <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>{english ? 'Databases' : 'Bases de donnée'}</Typography>
+            {_skills("db")}
+            <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>Technologies</Typography>
             {_skills("others")}
           </Stack>
           {/* <Divider variant="middle" /> */}
