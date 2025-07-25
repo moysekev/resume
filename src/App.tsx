@@ -274,7 +274,7 @@ export default function App() {
       <Typography variant="body1" align='justify'>{position.summary}</Typography>
       {(index === 0 || index === 1) && position.details &&
         <Stack sx={{ mt: 1 }} direction='row' spacing={2} alignItems='center'>
-          <Divider orientation="vertical" variant="middle" flexItem />
+          <Divider sx={{ bgcolor: green[200] }} orientation="vertical" variant="middle" flexItem />
           <Stack>
             {/* component='ul' */}
             {position.details.map((detail, index) => <Typography key={index} variant="body2" align='justify' component='span'>
@@ -284,7 +284,8 @@ export default function App() {
       {position.achievements &&
         <Stack sx={{ mt: 1 }} direction='row' spacing={2} alignItems='center'>
           {/* <TrendingUpTwoToneIcon fontSize="small" /> */}
-          <Divider sx={{ bgcolor: "success.light" }} orientation="vertical" variant="middle" flexItem></Divider>
+          {/* color={'light_green' as any} */}
+          <Divider sx={{ bgcolor: green[500] }} orientation="vertical" variant="middle" flexItem></Divider>
           <Stack>
             {/* component='ul' */}
             {position.achievements.map((detail, index) => <Typography key={index} variant="body2" align='justify' component='span'>

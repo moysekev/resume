@@ -131,6 +131,7 @@
     "strongSkills": [
         "Angular",
         "Architecture",
+        "Concurrent Programming",
         "Fullstack",
         "Golang",
         "Java",
@@ -232,6 +233,9 @@
                 "Ecriture de spécifications détaillées, développement, missions d'expertises. Création de processeurs de paiement (gestion transactionelle des balances), de connecteurs d'applications.",
                 "Monétique : RBS (Royal Bank of Scotland), XL indonesia",
                 "Télécom : 3UK, Orange, SFR, Bouygues, SwissCom, BSkyB"
+            ],
+            "achievements": [
+                "High-availability banking application managing over 50,000 transactions per second."
             ],
             "domains": [
                 "Telecom",
