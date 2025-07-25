@@ -51,70 +51,91 @@
     ],
     "email": "kevin_moyse@yahoo.fr",
     "phone": "0689666498",
-    "skills": {
-        "architecture": [
-            "Domain-Driven",
-            "APIs",
-            "Fullstack",
-            "Event-Driven",
-            "Microservices",
-            "Concurrent Programming",
-            "Haute Disponibilté",
-            "Performances",
-            "Sécurité"
-        ],
-        "softskills": [
-            "Leadership",
-            "Empathie",
-            "Management"
-        ],
-        "frameworks": [
-            "Angular",
-            "React",
-            "MaterialUI",
-            "NextJS",
-            "Meteor",
-            "NodeJS"
-        ],
-        "languages": [
-            "Golang",
-            "Java",
-            "Python",
-            "Javascript",
-            "Typescript"
-        ],
-        "systems": [
-            "AWS",
-            "S3",
-            "GoogleCloud",
-            "Linux",
-            "Ubuntu",
-            "Docker"
-        ],
-        "db": [
-            "MongoDB",
-            "Oracle",
-            "MySQL",
-            "Postgre"
-        ],
-        "others": [
-            "ApiGateways",
-            "REST",
-            "Git",
-            "GitHub/lab CI/CD",
-            "Jenkins",
-            "Jira, Confluence",
-            "Kafka",
-            "Spark",
-            "Nginx",
-            "OAuth2",
-            "IAM",
-            "Keycloak",
-            "Prometheus",
-            "SonarQube",
-            "WebRTC"
-        ]
-    },
+    "skills": [
+        {
+            "title": "Architecture",
+            "items": [
+                "Domain-Driven",
+                "APIs",
+                "Fullstack",
+                "Event-Driven",
+                "Microservices",
+                "Concurrent Programming",
+                "Haute Disponibilté",
+                "Performances",
+                "Sécurité"
+            ]
+        },
+        {
+            "title": "Savoir-être",
+            "items": [
+                "Leadership",
+                "Empathie",
+                "Management"
+            ]
+        },
+        {
+            "title": "Frameworks",
+            "items": [
+                "Angular",
+                "React",
+                "MaterialUI",
+                "NextJS",
+                "Meteor",
+                "NodeJS"
+            ]
+        },
+        {
+            "title": "Langages",
+            "items": [
+                "Golang",
+                "Java",
+                "Python",
+                "Javascript",
+                "Typescript"
+            ]
+        },
+        {
+            "title": "Systèmes",
+            "items": [
+                "AWS",
+                "S3",
+                "GoogleCloud",
+                "Linux",
+                "Ubuntu",
+                "Docker"
+            ]
+        },
+        {
+            "title": "Bases de donnée",
+            "items": [
+                "MongoDB",
+                "Oracle",
+                "MySQL",
+                "Postgre"
+            ]
+        },
+        {
+            "title": "Technologies",
+            "items": [
+                "ApiGateways",
+                "REST",
+                "Git",
+                "GitHub/lab CI/CD",
+                "Jenkins",
+                "Jira, Confluence",
+                "Kafka",
+                "Spark",
+                "Nginx",
+                "OAuth2",
+                "IAM",
+                "Keycloak",
+                "Prometheus",
+                "SonarQube",
+                "WebRTC"
+            ]
+        }
+    ],
     "logos": {
         "Angular": "angular.png",
         "Architecture": "architecture.png",
@@ -171,6 +192,10 @@
                 "Conception de la stratégie d'intégration dans des solutions tierces tels que Salesforce, Zendesk, ServiceNow, Talkdesk.",
                 "Définition de la stack logicielle, choix des outils et technologies. Direction des développements."
             ],
+            "achievements": [
+                "Publication open-source de 2 librairies React dédiées au SDK, favorisant l'adoption par les développeurs en externe comme en interne.",
+                "Publication de l'intégration app-visio sur AppExchange Salesforce et marketplace Zendesk."
+            ],
             "details_old": [
                 "ApiRTC est une plateforme de visio conférence et une librairie de développement avec laquelle nous proposons des produits finaux : télémédecine, diagnostic, assistance, intégrés dans les CRMs tels que Salesforce ou Zendesk",
                 "Worked on the front-end user interfaces made in React, Material UI, and NodeJS",
@@ -211,7 +236,7 @@
             ],
             "achievements": [
                 "Contribution à la croissance du chiffre d'affaires, doublé pour atteindre 2 millions d'euros en un an.",
-                "Assuré la satisfaction de notre principal client, Covea, en garantissant un service fiable et quotidien pour la production de l'ensemble de leurs rapports réglementaires.",
+                "Assuré la satisfaction du principal client, Covea, avec une première mise en production on-premise sans bug malgré un usage intensif de +50 actuaires.",
                 "Exploitation de fermes de calculs de plusieurs centaines de CPU."
             ],
             "domains": [

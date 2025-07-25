@@ -10,8 +10,9 @@
         height: 297mm;
       }*/
 
-    li {
+    /* li {
         margin: 0;
-        /* removes all margin */
-    }
+        list-style-type: square;
+    } */
+
 }

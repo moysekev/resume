@@ -1,19 +1,17 @@
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from "@mui/icons-material/Phone";
-import ThumbUpTwoToneIcon from '@mui/icons-material/ThumbUpTwoTone';
-import TrendingUpTwoToneIcon from '@mui/icons-material/TrendingUpTwoTone';
 
 import { format, formatDuration, intervalToDuration } from "date-fns";
 
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
-import Typography from '@mui/material/Typography';
 import Avatar from "@mui/material/Avatar";
+import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import Divider from "@mui/material/Divider";
+import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 
 import en from "date-fns/locale/en-GB";
 import fr from "date-fns/locale/fr";
@@ -22,7 +20,7 @@ import resume from "./data/resume.json";
 import resume_en from "./data/resume_en.json";
 
 /* remove margins when printing */
-import { Container, Paper, useMediaQuery } from "@mui/material";
+import { Container, useMediaQuery } from "@mui/material";
 import './App.css';
 import { green } from "./theme";
 
@@ -274,15 +272,19 @@ export default function App() {
         </Grid>
       </Grid>
       <Typography variant="body1" align='justify'>{position.summary}</Typography>
-      {(index === 0 || index === 1) && position.details && <Stack sx={{ m: 1 }}>
-        {/* component='ul' */}
-        {position.details.map((detail, index) => <Typography key={index} variant="body2" align='justify' component='li'>
-          {detail}
-        </Typography>)}
-      </Stack>}
+      {(index === 0 || index === 1) && position.details &&
+        <Stack sx={{ mt: 1 }} direction='row' spacing={2} alignItems='center'>
+          <Divider orientation="vertical" variant="middle" flexItem />
+          <Stack>
+            {/* component='ul' */}
+            {position.details.map((detail, index) => <Typography key={index} variant="body2" align='justify' component='span'>
+              {detail}
+            </Typography>)}
+          </Stack></Stack>}
       {position.achievements &&
-        <Stack direction='row' spacing={2} alignItems='center' sx={{ mt: 1 }}>
-          <TrendingUpTwoToneIcon fontSize="small" />
+        <Stack sx={{ mt: 1 }} direction='row' spacing={2} alignItems='center'>
+          {/* <TrendingUpTwoToneIcon fontSize="small" /> */}
+          <Divider sx={{ bgcolor: "success.light" }} orientation="vertical" variant="middle" flexItem></Divider>
           <Stack>
             {/* component='ul' */}
             {position.achievements.map((detail, index) => <Typography key={index} variant="body2" align='justify' component='span'>
@@ -311,26 +313,28 @@ export default function App() {
     </Stack>)}
   </Stack>);
 
-  const _skills = (key: string) => <Box sx={{
-    display: 'flex',
-    flexWrap: 'wrap', // Allows chips to wrap to the next line
-    gap: .7 // Adds some space between chips
-  }} >
-    {((skills as any)[key]).map((skill: string, index: number) =>
-      <Chip sx={{
-        fontWeight: strongSkills.includes(skill) ? 'bold' : 'regular',
-      }} key={index} color={'light_green' as any} size="small"
-        avatar={hasProperty(logos, skill) ? <Avatar alt={skill} src={new URL('../assets/' + (logos as any)[skill], import.meta.url).href} /> : undefined}
-        label={skill} />)}
-    {/* size={strongSkills.includes(skill) ? "medium" : "small"} */}
-  </Box>;
+  const _skills = <Stack spacing={1}>
+    {skills.map((skillset, index) =>
+      <Stack spacing={.5}>
+        <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>{skillset.title}</Typography>
+        <Box sx={{
+          display: 'flex',
+          flexWrap: 'wrap', // Allows chips to wrap to the next line
+          gap: .7 // Adds some space between chips
+        }} >
+          {skillset.items.map((skill: string, index: number) =>
+            <Chip sx={{
+              fontWeight: strongSkills.includes(skill) ? 'bold' : 'regular',
+            }} key={index} color={'light_green' as any} size="small"
+              avatar={hasProperty(logos, skill) ? <Avatar alt={skill} src={new URL('../assets/' + (logos as any)[skill], import.meta.url).href} /> : undefined}
+              label={skill} />)}
+          {/* size={strongSkills.includes(skill) ? "medium" : "small"} */}
+        </Box>
+      </Stack>
+    )}
+  </Stack>;
 
   const _languages = <Box sx={{ display: 'flex', justifyContent: 'center' }} >
-    {/* <Stack spacing={1}>
-      {languages.map((language, index) =>
-        language.name
-      )}
-    </Stack> */}
     <Stack direction='column' spacing={1}>
       {languages.map((language, index) =>
         <Stack key={index}>
@@ -361,34 +365,18 @@ export default function App() {
     <Grid container spacing={2}>
       <Grid sx={{ mt: { xs: 0, sm: 0 } }}
         size={{ xs: 12, sm: 4 }}>
-        <Stack direction="column" spacing={4} justifyContent="space-evenly"
+        <Stack direction="column" spacing={2} justifyContent="space-evenly"
           sx={{
             height: '100%',
             alignItems: "center",
           }}>
-          <Stack spacing={1}>
-            <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>Architecture</Typography>
-            {_skills("architecture")}
-            <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>{english ? 'Soft skills' : 'Savoir-être'}</Typography>
-            {_skills("softskills")}
-            <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>Frameworks</Typography>
-            {_skills("frameworks")}
-            <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>{english ? 'Languages' : 'Langages'}</Typography>
-            {_skills("languages")}
-            <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>{english ? 'Systems' : 'Systèmes'}</Typography>
-            {_skills("systems")}
-            <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>{english ? 'Databases' : 'Bases de donnée'}</Typography>
-            {_skills("db")}
-            <Typography variant="caption" color="primary" component="span" sx={{ fontSize: { xs: '.6rem', sm: '.7rem' } }}>Technologies</Typography>
-            {_skills("others")}
-          </Stack>
-          {/* <Divider variant="middle" /> */}
+          {_skills}
           {_languages}
           {!isMobile && _leisures}
         </Stack>
       </Grid>
       <Grid size={{ xs: 12, sm: 8 }}>
-        <Stack spacing={2}>
+        <Stack spacing={1}>
           <Divider variant="middle">
             <Typography variant="overline" fontSize=".7rem">{english ? 'Experience' : 'Expérience professionnelle'}</Typography>
           </Divider>

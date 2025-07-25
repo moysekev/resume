@@ -20,70 +20,91 @@
     ],
     "email": "kevin_moyse@yahoo.fr",
     "phone": "0689666498",
-    "skills": {
-        "architecture": [
-            "Domain-Driven",
-            "APIs",
-            "Fullstack",
-            "Event-Driven",
-            "Microservices",
-            "Concurrent Programming",
-            "High Availability",
-            "Performances",
-            "Security"
-        ],
-        "softskills": [
-            "Leadership",
-            "Empathy",
-            "Management"
-        ],
-        "frameworks": [
-            "Angular",
-            "React",
-            "MaterialUI",
-            "NextJS",
-            "Meteor",
-            "NodeJS"
-        ],
-        "languages": [
-            "Golang",
-            "Java",
-            "Python",
-            "Javascript",
-            "Typescript"
-        ],
-        "systems": [
-            "AWS",
-            "S3",
-            "GoogleCloud",
-            "Linux",
-            "Ubuntu",
-            "Docker"
-        ],
-        "db": [
-            "MongoDB",
-            "Oracle",
-            "MySQL",
-            "Postgre"
-        ],
-        "others": [
-            "ApiGateways",
-            "REST",
-            "Git",
-            "GitHub/lab CI/CD",
-            "Jenkins",
-            "Jira, Confluence",
-            "Kafka",
-            "Spark",
-            "Nginx",
-            "OAuth2",
-            "IAM",
-            "Keycloak",
-            "Prometheus",
-            "SonarQube",
-            "WebRTC"
-        ]
-    },
+    "skills": [
+        {
+            "title": "Architecture",
+            "items": [
+                "Domain-Driven",
+                "APIs",
+                "Fullstack",
+                "Event-Driven",
+                "Microservices",
+                "Concurrent Programming",
+                "High Available",
+                "Performances",
+                "Security"
+            ]
+        },
+        {
+            "title": "Soft skills",
+            "items": [
+                "Leadership",
+                "Empathy",
+                "Management"
+            ]
+        },
+        {
+            "title": "Frameworks",
+            "items": [
+                "Angular",
+                "React",
+                "MaterialUI",
+                "NextJS",
+                "Meteor",
+                "NodeJS"
+            ]
+        },
+        {
+            "title": "Languages",
+            "items": [
+                "Golang",
+                "Java",
+                "Python",
+                "Javascript",
+                "Typescript"
+            ]
+        },
+        {
+            "title": "Systems",
+            "items": [
+                "AWS",
+                "S3",
+                "GoogleCloud",
+                "Linux",
+                "Ubuntu",
+                "Docker"
+            ]
+        },
+        {
+            "title": "Databases",
+            "items": [
+                "MongoDB",
+                "Oracle",
+                "MySQL",
+                "Postgre"
+            ]
+        },
+        {
+            "title": "Technologies",
+            "items": [
+                "ApiGateways",
+                "REST",
+                "Git",
+                "GitHub/lab CI/CD",
+                "Jenkins",
+                "Jira, Confluence",
+                "Kafka",
+                "Spark",
+                "Nginx",
+                "OAuth2",
+                "IAM",
+                "Keycloak",
+                "Prometheus",
+                "SonarQube",
+                "WebRTC"
+            ]
+        }
+    ],
     "logos": {
         "Angular": "angular.png",
         "Architecture": "architecture.png",
@@ -133,11 +154,15 @@
             ],
             "website": "https://www.apizee.com/",
             "startDate": "3/15/2021",
-            "summary": "Management of the redesign of the architecture and full-stack development of a SaaS video-assistance product.",
+            "summary": "Redesign of the architecture. Full-stack development of a SaaS video-assistance product.",
             "details": [
                 "Development of an abstraction layer between the platform and the product's software technology.",
                 "Design of the integration strategy with third-party solutions such as Salesforce, Zendesk, ServiceNow, and Talkdesk.",
-                "Definition of the software stack, selection of tools and technologies, and leadership of development teams"
+                "Definition of the software stack, selection of tools and technologies, and leadership of development teams."
+            ],
+            "achievements": [
+                "Open-source publication of 2 React libraries dedicated to the SDK, promoting adoption by both external and internal developers.",
+                "Publication of the visio-app integration on Salesforce AppExchange and the Zendesk marketplace."
             ],
             "domains": [
                 "Video Conferencing"
@@ -168,12 +193,12 @@
             "endDate": "3/31/2021",
             "summary": "Design and implementation of a regulatory SaaS solution for software and information sharing, distribution of computations, and automation of lengthy business processes.",
             "details": [
-                "Head of the complete software factory for the publisher, ensuring client satisfaction.",
+                "Head of the complete software factory.",
                 "Team management and development of the core frontend and backend layers."
             ],
             "achievements": [
                 "Contributed to revenue growth, doubling it to reach €2 million within one year.",
-                "Ensured the satisfaction of our key customer, Covea, by providing reliable and daily service for the production of all their regulatory reports.",
+                "Ensured the satisfaction of the main customer, Covea, with an initial on-premise deployment completed bug-free despite intensive usage by over 50 actuaries.",
                 "Operation of computing farms with several hundred CPUs."
             ],
             "domains": [
@@ -201,7 +226,7 @@
             "logo": "tibco.png",
             "startDate": "2010",
             "endDate": "3/15/2016",
-            "summary": "Technical Lead. Specification writing. Development of high-performance applications.",
+            "summary": "Worldwide Technical Architecture Lead. Specifications writing. Development of high-performance applications.",
             "details": [
                 "Définition d'architecture globale d'applications au sein de SI dans les domaines Télécom et bancaires.",
                 "Ecriture de spécifications détaillées, développement, missions d'expertises. Création de processeurs de paiement (gestion transactionelle des balances), de connecteurs d'applications.",
@@ -229,7 +254,7 @@
             "logo": "kabira.png",
             "startDate": "3/1/2003",
             "endDate": "2010",
-            "summary": "Design and development of projects, products, and solutions. Consulting for clients and integrators.",
+            "summary": "Design and development of projects, products, and solutions. Consulting for customers and integrators.",
             "details": [
                 "Compréhension des besoins clients, afin de créer et/ou d'améliorer des produits.",
                 "Invention et réalisation du Produit KBM (Business Modeling) afin de développer une solution de 'mobilepayment' en Model Driven Development (génération automatique du code à partir de diagrammes UML) basée sur la plateforme multithread KTP",
