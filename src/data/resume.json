@@ -80,6 +80,7 @@
                 "Angular",
                 "React",
                 "MaterialUI",
+                "NestJS",
                 "NextJS",
                 "Meteor",
                 "NodeJS"
@@ -125,6 +126,7 @@
                 "Jenkins",
                 "Jira, Confluence",
                 "Kafka",
+                "Redis",
                 "Spark",
                 "Nginx",
                 "OAuth2",
@@ -151,10 +153,12 @@
         "Linux": "linux.png",
         "Meteor": "meteor.png",
         "MongoDB": "mongodb.png",
+        "NestJS": "nestjs.png",
         "NextJS": "nextjs.png",
         "NodeJS": "nodejs.png",
         "Python": "python.png",
         "React": "react.png",
+        "Redis": "redis-logo.svg",
         "Typescript": "typescript.png",
         "Ubuntu": "ubuntu.png",
         "WebRTC": "webrtc.png"
