@@ -17,10 +17,8 @@
     "summary": [
         "15+ années d'expérience en Architecture Logicielle.",
         "Secteurs télécommunications, banque, assurance.",
-        "Environnement international, très à l'aise en anglais technique.",
         "Capacité à résoudre les problèmes.",
-        "Appétence pour le management. Qualités de leadership. Très bon relationnel.",
-        "Intérêt récent pour le langage Go."
+        "Qualités de leadership. Très bon relationnel."
     ],
     "summary_en": [
         "15+ years of experience in Software Architecture.",
@@ -55,12 +53,11 @@
         {
             "title": "Architecture",
             "items": [
-                "Domain-Driven",
-                "APIs",
                 "Fullstack",
+                "Domain-Driven",
                 "Event-Driven",
                 "Microservices",
-                "Concurrent Programming",
+                "APIs",
                 "Haute Disponibilté",
                 "Performances",
                 "Sécurité"
@@ -78,60 +75,46 @@
             "title": "Frameworks",
             "items": [
                 "Angular",
-                "React",
                 "MaterialUI",
-                "NextJS",
-                "Meteor",
+                "NestJS",
                 "NodeJS"
             ]
         },
         {
             "title": "Langages",
             "items": [
+                "Typescript",
                 "Golang",
                 "Java",
                 "Python",
-                "Javascript",
-                "Typescript"
+                "Concurrent Programming"
             ]
         },
         {
             "title": "Systèmes",
             "items": [
-                "AWS",
-                "S3",
                 "GoogleCloud",
-                "Linux",
-                "Ubuntu",
-                "Docker"
+                "Docker",
+                "Linux"
             ]
         },
         {
             "title": "Bases de donnée",
             "items": [
                 "MongoDB",
-                "Oracle",
-                "MySQL",
-                "Postgre"
+                "PostgreSQL"
             ]
         },
         {
             "title": "Technologies",
             "items": [
                 "ApiGateways",
-                "REST",
-                "Git",
                 "GitHub/lab CI/CD",
-                "Jenkins",
                 "Jira, Confluence",
                 "Kafka",
-                "Spark",
+                "Redis",
                 "Nginx",
-                "OAuth2",
-                "IAM",
                 "Keycloak",
-                "Prometheus",
-                "SonarQube",
                 "WebRTC"
             ]
         }
@@ -151,10 +134,12 @@
         "Linux": "linux.png",
         "Meteor": "meteor.png",
         "MongoDB": "mongodb.png",
+        "NestJS": "nestjs.svg",
         "NextJS": "nextjs.png",
         "NodeJS": "nodejs.png",
         "Python": "python.png",
         "React": "react.png",
+        "Redis": "redis-logo.svg",
         "Typescript": "typescript.png",
         "Ubuntu": "ubuntu.png",
         "WebRTC": "webrtc.png"
@@ -168,7 +153,8 @@
         "Java",
         "MongoDB",
         "React",
-        "Typescript"
+        "Typescript",
+        "Performances"
     ],
     "website": "",
     "linkedIn": "https://www.linkedin.com/in/kevin-moyse-3352bb29",
@@ -187,7 +173,7 @@
             "website": "https://www.apizee.com/",
             "startDate": "3/15/2021",
             "summary_": "Direction Technique, Architecture produit.",
-            "summary": "Direction de la refonte de l'architecture et du développement full-stack d'un produit SaaS de visio-assistance.",
+            "summary": "Direction de la refonte de l'architecture et du développement fullstack (React NextJS NestJS PostGreSQL) d'un produit SaaS de visio-assistance.",
             "details": [
                 "Développement d'une couche d'abstraction entre plateforme et technologie logicielle produit.",
                 "Conception de la stratégie d'intégration dans Salesforce, Zendesk, ServiceNow, Talkdesk...",
