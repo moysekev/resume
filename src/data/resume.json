@@ -55,11 +55,12 @@
         {
             "title": "Architecture",
             "items": [
-                "Domain-Driven",
-                "APIs",
                 "Fullstack",
+                "Domain-Driven",
                 "Event-Driven",
+                "APIs",
                 "Microservices",
+                "Calcul Distribué",
                 "Concurrent Programming",
                 "Haute Disponibilté",
                 "Performances",
@@ -153,7 +154,7 @@
         "Linux": "linux.png",
         "Meteor": "meteor.png",
         "MongoDB": "mongodb.png",
-        "NestJS": "nestjs.png",
+        "NestJS": "nestjs.svg",
         "NextJS": "nextjs.png",
         "NodeJS": "nodejs.png",
         "Python": "python.png",
@@ -166,6 +167,7 @@
     "strongSkills": [
         "Angular",
         "Architecture",
+        "Calcul Distribué",
         "Concurrent Programming",
         "Fullstack",
         "Golang",
@@ -193,9 +195,9 @@
             "summary_": "Direction Technique, Architecture produit.",
             "summary": "Direction de la refonte de l'architecture et du développement full-stack d'un produit SaaS de visio-assistance.",
             "details": [
-                "Développement d'une couche d'abstraction entre plateforme et technologie logicielle produit.",
+                "Définition de la stack logicielle, choix des outils et technologies. Direction des développements.",
                 "Conception de la stratégie d'intégration dans Salesforce, Zendesk, ServiceNow, Talkdesk...",
-                "Définition de la stack logicielle, choix des outils et technologies. Direction des développements."
+                "Développement d'une couche d'abstraction entre plateforme et technologie logicielle produit."
             ],
             "achievements": [
                 "Publication open-source de 2 librairies React dédiées au SDK, favorisant l'adoption par les développeurs en externe comme en interne.",
