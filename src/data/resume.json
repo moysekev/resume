@@ -58,6 +58,7 @@
                 "Event-Driven",
                 "Microservices",
                 "APIs",
+                "Calcul distribué",
                 "Haute Disponibilté",
                 "Performances",
                 "Sécurité"
@@ -147,6 +148,7 @@
     "strongSkills": [
         "Angular",
         "Architecture",
+        "Calcul distribué",
         "Concurrent Programming",
         "Fullstack",
         "Golang",
@@ -157,7 +159,6 @@
         "Performances"
     ],
     "website": "",
-    "linkedIn": "https://www.linkedin.com/in/kevin-moyse-3352bb29",
     "linkedIn_disabled": "https://www.linkedin.com/in/kevin-moyse-3352bb29",
     "github": "https://github.com/moysekev",
     "positions": [
@@ -175,9 +176,9 @@
             "summary_": "Direction Technique, Architecture produit.",
             "summary": "Direction de la refonte de l'architecture et du développement fullstack (React NextJS NestJS PostGreSQL) d'un produit SaaS de visio-assistance.",
             "details": [
-                "Développement d'une couche d'abstraction entre plateforme et technologie logicielle produit.",
+                "Définition de la stack logicielle, choix des outils et technologies. Direction des développements.",
                 "Conception de la stratégie d'intégration dans Salesforce, Zendesk, ServiceNow, Talkdesk...",
-                "Définition de la stack logicielle, choix des outils et technologies. Direction des développements."
+                "Développement d'une couche d'abstraction entre plateforme et technologie logicielle produit."
             ],
             "achievements": [
                 "Publication open-source de 2 librairies React dédiées au SDK, favorisant l'adoption par les développeurs en externe comme en interne.",
