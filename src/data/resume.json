@@ -58,7 +58,6 @@
                 "Fullstack",
                 "Domain-Driven",
                 "Event-Driven",
-                "APIs",
                 "Microservices",
                 "Calcul Distribué",
                 "Concurrent Programming",
@@ -80,7 +79,6 @@
             "items": [
                 "Angular",
                 "React",
-                "MaterialUI",
                 "NestJS",
                 "NextJS",
                 "Meteor",
@@ -347,6 +345,11 @@
         }
     ],
     "educations": [
+        {
+            "name": "Next.js avancé",
+            "location": "Orsys",
+            "dateText": "2026"
+        },
         {
             "name": "Communication : Travailler ensemble en confiance",
             "location": "B-Flower",

@@ -100,7 +100,7 @@ export default function App() {
       </Stack>
       <Avatar alt={`-anonymisé-`} src="" />
       <Stack>
-        <Link underline="hover" href={`mailto:${email}`}>
+        <Link underline="hover" href={`mailto:`}>
           <Stack direction='row' alignItems='center' spacing={1}>
             <EmailIcon fontSize="small" />
             <Typography variant="subtitle2" fontWeight={700} sx={{ fontSize: { xs: '.6rem', sm: '.8rem' } }}>
@@ -108,7 +108,7 @@ export default function App() {
             </Typography>
           </Stack>
         </Link>
-        <Link underline="hover" href={`tel:${phone}`}>
+        <Link underline="hover" href={`tel:`}>
           <Stack direction='row' alignItems='center' spacing={1}>
             <PhoneIcon fontSize="small" />
             <Typography variant="subtitle2" fontWeight={700} sx={{ fontSize: { xs: '.6rem', md: '.8rem' } }}>
